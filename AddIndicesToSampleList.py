@@ -1,15 +1,10 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
 from io import StringIO
 
 def main():
     st.title("Sample Manifest Management")
-
-    # Initialize session state
-    if "file_selections" not in st.session_state:
-        st.session_state.file_selections = {}  # Dictionary to hold selections for each file
-    if "all_index_data" not in st.session_state:
-        st.session_state.all_index_data = pd.DataFrame()
 
     # Step 1: Upload Sample Manifest
     st.header("Step 1: Upload Sample Manifest")
@@ -37,43 +32,41 @@ def main():
 
     # Step 3: Assign Indexes (Multiple Source Files)
     st.header("Step 3: Assign Indexes")
-    source_files = st.file_uploader("Upload Source Files for Indexes", type=["csv"], accept_multiple_files=True, key="source_files")
+    source_files = st.file_uploader("Upload Source Files for Indexes", type=["csv"], accept_multiple_files=True)
+
+    # Initialize session state to persist selections across interactions
+    if "selected_indexes" not in st.session_state:
+        st.session_state["selected_indexes"] = set()
+
+    all_index_data = pd.DataFrame()
 
     if source_files:
         for source_file in source_files:
-            file_name = source_file.name
             index_data = pd.read_csv(source_file)
-            st.write(f"Source File Data ({file_name}):")
+            st.write(f"Source File Data ({source_file.name}):")
             st.dataframe(index_data)
 
-            # Initialize selection set for this file
-            if file_name not in st.session_state.file_selections:
-                st.session_state.file_selections[file_name] = set()
-
-            # Get current selection for this file
-            current_selections = st.session_state.file_selections[file_name]
-
-            st.subheader(f"Select Indexes for {file_name}")
+            st.subheader(f"Select Indexes for {source_file.name}")
             rows = ["A", "B", "C", "D", "E", "F", "G", "H"]
             columns = list(range(1, 13))
 
             # Bulk selection buttons
             col1, col2, col3 = st.columns(3)
-            if col1.button("Select All", key=f"select_all_{file_name}"):
-                current_selections.update({f"{row}{col:02d}" for col in columns for row in rows})
-            if col2.button("Clear All", key=f"clear_all_{file_name}"):
-                current_selections.clear()
+            if col1.button("Select All", key=f"select_all_{source_file.name}"):
+                st.session_state["selected_indexes"].update({f"{row}{col:02d}" for col in columns for row in rows})
+            if col2.button("Clear All", key=f"clear_all_{source_file.name}"):
+                st.session_state["selected_indexes"].clear()
 
             # Option to select multiple columns
-            selected_columns = col3.multiselect("Select Columns to Toggle", columns, key=f"multi_column_select_{file_name}")
-            if st.button("Toggle Selected Columns", key=f"toggle_selected_columns_{file_name}"):
+            selected_columns = col3.multiselect("Select Columns to Toggle", columns, key=f"multi_column_select_{source_file.name}")
+            if st.button("Toggle Selected Columns", key=f"toggle_selected_columns_{source_file.name}"):
                 for selected_column in selected_columns:
                     for row in rows:
                         index = f"{row}{selected_column:02d}"
-                        if index in current_selections:
-                            current_selections.remove(index)
+                        if index in st.session_state["selected_indexes"]:
+                            st.session_state["selected_indexes"].remove(index)
                         else:
-                            current_selections.add(index)
+                            st.session_state["selected_indexes"].add(index)
 
             # Display the grid with checkboxes
             grid_selections = []
@@ -81,36 +74,36 @@ def main():
                 cols = st.columns(len(columns))
                 for col_label, col in zip(columns, cols):
                     checkbox_label = f"{row}{col_label:02d}"
-                    checked = checkbox_label in current_selections
-                    if col.checkbox(checkbox_label, value=checked, key=f"grid_{file_name}_{checkbox_label}"):
-                        current_selections.add(checkbox_label)
+                    checked = checkbox_label in st.session_state["selected_indexes"]
+
+                    # Use checkbox and update selection set in session_state
+                    if col.checkbox(checkbox_label, value=checked, key=f"grid_{source_file.name}_{checkbox_label}"):
+                        st.session_state["selected_indexes"].add(checkbox_label)
                     else:
-                        current_selections.discard(checkbox_label)
-                    if checkbox_label in current_selections:
+                        st.session_state["selected_indexes"].discard(checkbox_label)
+
+                    # Collect the current state of the grid selections
+                    if checkbox_label in st.session_state["selected_indexes"]:
                         grid_selections.append(checkbox_label)
 
-            # Update session state for this file
-            st.session_state.file_selections[file_name] = current_selections
-
-            # Display selected indexes for this file
-            ordered_indexes = sorted(current_selections, key=lambda x: (int(x[1:]), x[0]))  # Column-wise sorting
-            st.write(f"Selected Indexes for {file_name} (Column-Wise Order):")
+            # Ensure selected_indexes remains unique and sorted in column-wise order
+            ordered_indexes = sorted(st.session_state["selected_indexes"], key=lambda x: (int(x[1:]), x[0]))
+            st.write("Selected Indexes (Column-Wise Order):")
             st.write(", ".join(ordered_indexes))
 
-            # Add selected data to combined index data
             for selected in ordered_indexes:
                 row_data = index_data[index_data.iloc[:, 0] == selected]  # Match on the first column (index ID)
                 if not row_data.empty:
-                    st.session_state.all_index_data = pd.concat([st.session_state.all_index_data, row_data])
+                    all_index_data = pd.concat([all_index_data, row_data])
 
-        # Display combined index data from all files
-        st.write("Combined Index Data Across All Files:")
-        st.dataframe(st.session_state.all_index_data)
+        st.write("Selected Indexes Across All Files:", ordered_indexes)
+        st.write("Combined Index Data:")
+        st.dataframe(all_index_data)
 
         # Map selected indexes to manifest
         for i, sample in editable_manifest.iterrows():
-            if i < len(st.session_state.all_index_data):
-                for key, value in st.session_state.all_index_data.iloc[i].items():
+            if i < len(all_index_data):
+                for key, value in all_index_data.iloc[i].items():
                     editable_manifest.at[i, key] = value
 
         st.write("Manifest with Assigned Indexes:")
