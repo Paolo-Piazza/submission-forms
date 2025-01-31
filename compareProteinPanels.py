@@ -17,7 +17,7 @@ def convert_df_to_csv(df):
 st.title("CSV List Comparator")
 
 DATA_DIR = "data/"  # Folder where preloaded files are stored
-TEMPLATE_DIR = "templates/"  # Folder where template files are stored
+TEMPLATE_DIR = "template/"  # Folder where template files are stored
 TEMPLATE_FILE = "template.csv"  # Template file name
 
 preloaded_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
