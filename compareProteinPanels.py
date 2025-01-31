@@ -16,6 +16,21 @@ def convert_df_to_csv(df):
 
 st.title("CSV List Comparator")
 
+DATA_DIR = "data/"  # Folder where preloaded files are stored
+TEMPLATE_DIR = "templates/"  # Folder where template files are stored
+TEMPLATE_FILE = "template.csv"  # Template file name
+
+preloaded_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
+
+# Download button for the template file
+if os.path.exists(os.path.join(TEMPLATE_DIR, TEMPLATE_FILE)):
+    with open(os.path.join(TEMPLATE_DIR, TEMPLATE_FILE), "rb") as template:
+        st.download_button(
+            label="Download CSV Template",
+            data=template,
+            file_name=TEMPLATE_FILE,
+            mime="text/csv"
+        )
 
 #DATA_DIR_Temp = os.path.join(os.path.dirname(__file__), "template")
 #template_file = [f for f in os.listdir(DATA_DIR_Temp) if f.endswith("template.csv")]
