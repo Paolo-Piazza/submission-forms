@@ -1,0 +1,198 @@
+UniProt ID,Gene,Protein name
+O15444,CCL25,C-C motif chemokine 25
+O15455,TLR3,Toll-like receptor 3
+O43508,TNFSF12,Tumor necrosis factor ligand superfamily member 12
+O43557,TNFSF14,Tumor necrosis factor ligand superfamily member 14
+O43915,VEGFD,Vascular endothelial growth factor D
+O43927,CXCL13,C-X-C motif chemokine 13
+O00253,AGRP,Agouti-related protein
+O00273,DFFA,DNA fragmentation factor subunit alpha
+O00300,TNFRSF11B,Tumor necrosis factor receptor superfamily member 11B
+O00585,CCL21,C-C motif chemokine 21
+O15169,AXIN1,Axin-1
+O14788,TNFSF11,Tumor necrosis factor ligand superfamily member 11
+O14836,TNFRSF13B,Tumor necrosis factor receptor superfamily member 13B
+O15123,ANGPT2,Angiopoietin-2
+O14625,CXCL11,C-X-C motif chemokine 11
+O95760,IL33,Interleukin-33
+O95630,STAMBP,STAM-binding protein
+O94992,HEXIM1,Protein HEXIM1
+O94907,DKK1,Dickkopf-related protein 1
+O76036,NCR1,Natural cytotoxicity triggering receptor 1
+O75888,TNFSF13,Tumor necrosis factor ligand superfamily member 13
+O75144,ICOSLG,ICOS ligand
+O60500,NPHS1,Nephrin
+O60449,LY75,Lymphocyte antigen 75
+P01275,GCG,Pro-glucagon
+P01137,TGFB1,Transforming growth factor beta-1 proprotein
+P01135,TGFA,Protransforming growth factor alpha
+P01133,EGF,Pro-epidermal growth factor
+P00813,ADA,Adenosine deaminase
+O95971,CD160,CD160 antigen
+P05231,IL6,Interleukin-6
+P01584,IL1B,Interleukin-1 beta
+P01583,IL1A,Interleukin-1 alpha
+P01579,IFNG,Interferon gamma
+P01375,TNF,Tumor necrosis factor
+P01374,LTA,Lymphotoxin-alpha
+P05412,JUN,Transcription factor AP-1
+P01588,EPO,Erythropoietin
+P05113,IL5,Interleukin-5
+P05112,IL4,Interleukin-4
+P04141,CSF2,Granulocyte-macrophage colony-stimulating factor
+P02778,CXCL10,C-X-C motif chemokine 10
+P01903,HLA-DRA,HLA class II histocompatibility antigen
+P01730,CD4,T-cell surface glycoprotein CD4
+P03956,MMP1,Interstitial collagenase
+P01563,IFNA2,Interferon alpha-2
+P01574,IFNB1,Interferon beta
+P09238,MMP10,Stromelysin-2
+P09237,MMP7,Matrilysin
+P09038,FGF2,Fibroblast growth factor 2
+P08700,IL3,Interleukin-3
+P06731,CEACAM5,Carcinoembryonic antigen-related cell adhesion molecule 5
+P06730,EIF4E,Eukaryotic translation initiation factor 4E
+P05937,CALB1,Calbindin
+P05783,KRT18,Keratin
+P10147,CCL3,C-C motif chemokine 3
+P10145,CXCL8,Interleukin-8
+P10144,GZMB,Granzyme B
+P09341,CXCL1,Growth-regulated alpha protein
+P09919,CSF3,Granulocyte colony-stimulating factor
+P09681,GIP,Gastric inhibitory polypeptide
+P09603,CSF1,Macrophage colony-stimulating factor 1
+P10082,PYY,Peptide YY
+P18510,IL1RN,Interleukin-1 receptor antagonist protein
+P13500,CCL2,C-C motif chemokine 2
+P13236,CCL4,C-C motif chemokine 4
+P13232,IL7,Interleukin-7
+P13725,OSM,Oncostatin-M
+P12544,GZMA,Granzyme A
+P12034,FGF5,Fibroblast growth factor 5
+P10747,CD28,T-cell-specific surface glycoprotein CD28
+P16671,CD36,Platelet glycoprotein 4
+P16455,MGMT,Methylated-DNA--protein-cysteine methyltransferase
+P15692,VEGFA,Vascular endothelial growth factor A
+P15514,AREG,Amphiregulin
+P15018,LIF,Leukemia inhibitory factor
+P14210,HGF,Hepatocyte growth factor
+P30203,CD6,T-cell differentiation antigen CD6
+P21583,KITLG,Kit ligand
+P20809,IL11,Interleukin-11
+P20783,NTF3,Neurotrophin-3
+P19883,FST,Follistatin
+P22223,CDH3,Cadherin-3
+P18627,LAG3,Lymphocyte activation gene 3 protein
+P18564,ITGB6,Integrin beta-6
+P28845,HSD11B1,Corticosteroid 11-beta-dehydrogenase isozyme 1
+P28325,CST5,Cystatin-D
+P24394,IL4R,Interleukin-4 receptor subunit alpha
+P24001,IL32,Interleukin-32
+P22301,IL10,Interleukin-10
+P26022,PTX3,Pentraxin-related protein PTX3
+P39900,MMP12,Macrophage metalloelastase
+P35968,KDR,Vascular endothelial growth factor receptor 2
+P35613,BSG,Basigin
+P35318,ADM,Pro-adrenomedullin
+P35225,IL13,Interleukin-13
+P33681,CD80,T-lymphocyte activation antigen CD80
+P32970,CD70,CD70 antigen
+P32927,CSF2RB,Cytokine receptor common subunit beta
+P39905,GDNF,Glial cell line-derived neurotrophic factor
+P45984,MAPK9,Mitogen-activated protein kinase 9
+P43489,TNFRSF4,Tumor necrosis factor receptor superfamily member 4
+P42830,CXCL5,C-X-C motif chemokine 5
+P42702,LIFR,Leukemia inhibitory factor receptor
+P41217,CD200,OX-2 membrane glycoprotein
+P40933,IL15,Interleukin-15
+P40259,CD79B,B-cell antigen receptor complex-associated protein beta chain
+P40225,THPO,Thrombopoietin
+P51671,CCL11,Eotaxin
+P50591,TNFSF10,Tumor necrosis factor ligand superfamily member 10
+P49771,FLT3LG,Fms-related tyrosine kinase 3 ligand
+P49763,PGF,Placenta growth factor
+P48061,CXCL12,Stromal cell-derived factor 1
+P48023,FASLG,Tumor necrosis factor ligand superfamily member 6
+P80075,CCL8,C-C motif chemokine 8
+P78556,CCL20,C-C motif chemokine 20
+P78410,BTN3A2,Butyrophilin subfamily 3 member A2
+P56645,PER3,Period circadian protein homolog 3
+P62760,VSNL1,Visinin-like protein 1
+P60568,IL2,Interleukin-2
+P58294,PROK1,Prokineticin-1
+P78380,OLR1,Oxidized low-density lipoprotein receptor 1
+Q03431,PTH1R,Parathyroid hormone/parathyroid hormone-related peptide receptor
+Q03405,PLAUR,Urokinase plasminogen activator surface receptor
+Q02880,TOP2B,DNA topoisomerase 2-beta
+Q01151,CD83,CD83 antigen
+P98170,XIAP,E3 ubiquitin-protein ligase XIAP
+P80162,CXCL6,C-X-C motif chemokine 6
+P80098,CCL7,C-C motif chemokine 7
+Q01344,IL5RA,Interleukin-5 receptor subunit alpha
+Q04609,FOLH1,Glutamate carboxypeptidase 2
+Q06830,PRDX1,Peroxiredoxin-1
+Q13478,IL18R1,Interleukin-18 receptor 1
+Q13421,MSLN,Mesothelin
+Q13291,SLAMF1,Signaling lymphocytic activation molecule
+Q13241,KLRD1,Natural killer cells antigen CD94
+Q08708,CD300C,CMRF35-like molecule 6
+Q07325,CXCL9,C-X-C motif chemokine 9
+Q07011,TNFRSF9,Tumor necrosis factor receptor superfamily member 9
+Q15762,CD226,CD226 antigen
+Q15399,TLR1,Toll-like receptor 1
+Q15389,ANGPT1,Angiopoietin-1
+Q15116,PDCD1,Programmed cell death protein 1
+Q14790,CASP8,Caspase-8
+Q14116,IL18,Interleukin-18
+Q14005,IL16,Pro-interleukin-16
+Q16552,IL17A,Interleukin-17A
+Q6UXB2,CXCL17,C-X-C motif chemokine 17
+Q68D85,NCR3LG1,Natural cytotoxicity triggering receptor 3 ligand 1
+Q5ZPR3,CD276,CD276 antigen
+Q3KPI0,CEACAM21,Carcinoembryonic antigen-related cell adhesion molecule 21
+Q16719,KYNU,Kynureninase
+Q16665,HIF1A,Hypoxia-inducible factor 1-alpha
+Q99075,HBEGF,Proheparin-binding EGF-like growth factor
+Q8WTT0,CLEC4C,C-type lectin domain family 4 member C
+Q8TD46,CD200R1,Cell surface glycoprotein CD200 receptor 1
+Q8TAD2,IL17D,Interleukin-17D
+Q8NI17,IL31RA,Interleukin-31 receptor subunit alpha
+Q8N608,DPP10,Inactive dipeptidyl peptidase 10
+Q8IXJ6,SIRT2,NAD-dependent protein deacetylase sirtuin-2
+Q8IU57,IFNLR1,Interferon lambda receptor 1
+Q8IU54,IFNL1,Interferon lambda-1
+Q92583,CCL17,C-C motif chemokine 17
+Q99062,CSF3R,Granulocyte colony-stimulating factor receptor
+Q96RJ3,TNFRSF13C,Tumor necrosis factor receptor superfamily member 13C
+Q96PD4,IL17F,Interleukin-17F
+Q96NY8,NECTIN4,Nectin-4
+Q96LA5,FCRL2,Fc receptor-like protein 2
+Q96D42,HAVCR1,Hepatitis A virus cellular receptor 1
+Q969D9,TSLP,Thymic stromal lymphopoietin
+Q9H293,IL25,Interleukin-25
+Q9GZV9,FGF23,Fibroblast growth factor 23
+Q9GZT9,EGLN1,Egl nine homolog 1
+Q9BXN2,CLEC7A,C-type lectin domain family 7 member A
+Q9H5V8,CDCP1,CUB domain-containing protein 1
+Q9BQ51,PDCD1LG2,Programmed cell death 1 ligand 2
+Q99731,CCL19,C-C motif chemokine 19
+Q99616,CCL13,C-C motif chemokine 13
+Q9UBU3,GHRL,Appetite-regulating hormone
+Q9P0M4,IL17C,Interleukin-17C
+Q9NZC2,TREM2,Triggering receptor expressed on myeloid cells 2
+Q9NYY1,IL20,Interleukin-20
+Q9NWZ3,IRAK4,Interleukin-1 receptor-associated kinase 4
+Q9NSA1,FGF21,Fibroblast growth factor 21
+Q9NRJ3,CCL28,C-C motif chemokine 28
+Q9UHD0,IL19,Interleukin-19
+Q9UIB8,CD84,SLAM family member 5
+Q9UK05,GDF2,Growth/differentiation factor 2
+Q9UMR7,CLEC4A,C-type lectin domain family 4 member A
+Q9UNE0,EDAR,Tumor necrosis factor receptor superfamily member EDAR
+Q9Y258,CCL26,C-C motif chemokine 26
+Q9Y5A7,NUB1,NEDD8 ultimate buster 1
+Q9Y6K9,IKBKG,NF-kappa-B essential modulator
+Q9Y6Q6,TNFRSF11A,Tumor necrosis factor receptor superfamily member 11A
+Q9UQV4,LAMP3,Lysosome-associated membrane glycoprotein 3
+P29459_P29460,IL12A_IL12B,Interleukin-12
+Q14213_Q8NEV9,EBI3_IL27,Interleukin-27
