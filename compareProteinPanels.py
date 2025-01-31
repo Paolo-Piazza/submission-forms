@@ -16,7 +16,8 @@ def convert_df_to_csv(df):
 
 st.title("CSV List Comparator")
 
-DATA_DIR = "https://github.com/Paolo-Piazza/submission-forms/tree/main"  # Folder where preloaded files are stored
+#DATA_DIR = "https://github.com/Paolo-Piazza/submission-forms/tree/main"  # Folder where preloaded files are stored
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 preloaded_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
 
 # Checkbox selection for multiple preloaded files
