@@ -53,6 +53,7 @@ if not st.session_state.authenticated:
             st.session_state.last_active = time.time()
             log_user_activity(email)
             st.success("Login successful!")
+            st.switch_page("submission-forms/password_protect.py")  # Redirect to the main app
         else:
             st.error("Invalid email or password. Please try again.")
 
@@ -63,3 +64,13 @@ if st.session_state.authenticated:
     if st.button("Logout"):
         st.session_state.authenticated = False
         st.experimental_rerun()
+import streamlit as st
+
+if "authenticated" not in st.session_state:
+    st.session_state.authenticated = False
+
+st.title("Login Page")
+
+email = st.text_input("Enter your email")
+password = st.text_input("Enter your password", type="password")
+
