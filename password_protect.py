@@ -8,7 +8,7 @@ SESSION_TIMEOUT = 600
 
 # Load user data from an external file (users.json)
 def load_users():
-    with open("users.json", "r") as file:
+    with open("TOM/users.json", "r") as file:
         return json.load(file)
 
 # Function to check if the email and password match
