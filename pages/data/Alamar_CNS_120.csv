@@ -1,0 +1,128 @@
+Full name,Gene,UniProt ID,Protein Name,Common Name,Function/Classification
+Abeta38,Amyloid Beta Precursor Protein,P05067,Amyloid-beta precursor protein,ab38,Amyloid and Tau Pathologies
+Abeta40,Amyloid Beta Precursor Protein,P05067,Amyloid-beta precursor protein,ab40,Amyloid and Tau Pathologies
+Abeta42,Amyloid Beta Precursor Protein,P05067,Amyloid-beta precursor protein,ab42,Amyloid and Tau Pathologies
+ACHE,Acetylocholinesterase (Cartwright Blood Group),P22303,Acetylcholinesterase,ACHE,Amyloid and Tau Pathologies
+AGRN,Agrin,O00468,Agrin,AGRN,Synuclein and Synaptic Discorders
+ANXA5,Annexin A5,P08758,Annexin A5,ANXA5,Neurodegeneration
+APOE,Apolipoprotein E,P02649,Apolipoprotein E,APOE,Amyloid and Tau Pathologies
+APOE,Apolipoprotein E isoform 4,P02649,Apolipoprotein E isoform 4,APOE4,Amyloid and Tau Pathologies
+ARSA,Arylsulfatase A,P15289,Arylsulfatase A,ARSA,Synuclein and Synaptic Discorders
+BACE1,Beta-Secretase 1,P56817,Beta-secretase 1,BACE1,Amyloid and Tau Pathologies
+BASP1,Brain Abundant Membrane Attached Signal Protein 1,P80723,Brain acid soluble protein 1,BASP1,Amyloid and Tau Pathologies
+BDNF,Brain Derived Neurotrophic Factor,P23560,Brain-derived neurotrophic factor,BDNF,Synuclein and Synaptic Discorders
+CALB2,Calbindin 2,P22676,Calretinin,CALB2,Neurodegeneration
+CCL11,C-C Motif Chemokine Ligand 11,P51671,Eotaxin,Eotaxin,Inflammation
+CCL13,C-C Motif Chemokine Ligand 13,Q99616,C-C motif chemokine 13,MCP4,Inflammation
+CCL17,C-C Motif Chemokine Ligand 17,Q92583,C-C motif chemokine 17,TARC/CCL17,Inflammation
+CCL2,C-C Motif Chemokine Ligand 2,P13500,C-C motif chemokine 2,MCP1,Inflammation
+CCL22,C-C Motif Chemokine Ligand 22,O00626,C-C motif chemokine 22,MDC,Inflammation
+CCL26,C-C Motif Chemokine Ligand 26,Q9Y258,C-C motif chemokine 26,Eotaxin-3,Inflammation
+CCL3,C-C Motif Chemokine Ligand 3,P10147,C-C motif chemokine 3,MIP1a/CCL3,Inflammation
+CCL4,C-C Motif Chemokine Ligand 4,P13236,C-C motif chemokine 4,Mip1b/CCL4,Inflammation
+CD40LG,CD40 Ligand,P29965,CD40 ligand,CD40L/TNFSF5,Inflammation
+CD63,CD63 Molecule,P08962,CD63 antigen,CD63,Amyloid and Tau Pathologies
+CHI3L1,Chitinase 3 Like 1,P36222,Chitinase-3-like protein 1,YKL40,Inflammation
+CHIT1,Chitinase 1,Q13231,Chitotriosidase-1,CHIT1,Inflammation
+CNTN2,Contactin 2,Q02246,Contactin-2,CNTN2,Neurodegeneration
+CRH,Corticotropin Releasing Hormone,P06850,Corticoliberin,CRH,Inflammation
+CRP,C-Reactive Protein,P02741,C-reactive protein,CRP,Inflammation
+CSF2,Colony Stimulating Factor 2,P04141,Granulocyte-macrophage colony-stimulating factor,GM-CSF,Inflammation
+CST3,Cystatin 3,P01034,Cystatin-C,CST3,Amyloid and Tau Pathologies
+CX3CL1,C-X3-C Motif Chemokine Ligand 1,P78423,Fractalkine,CX3CL1/Fractalkine,Inflammation
+CXCL1,C-X-C Motif Chemokine Ligand 1,P09341,Growth-regulated alpha protein,CXCL1/GROa,Inflammation
+CXCL10,C-X-C Motif Chemokine Ligand 10,P02778,C-X-C motif chemokine 10,IP-10,Inflammation
+CXCL8,C-X-C Motif Chemokine Ligand 8,P10145,Interleukin-8,IL8,Inflammation
+DDC,Aromatic-L-Amino-Acid Decarboxylase,P20711,Aromatic-L-Amino-Acid Decarboxylase,DDC,Synuclein and Synaptic Discorders
+ENO2,Enolase 2,P09104,Gamma-enolase,ENO2,Neurodegeneration
+FABP3,Fatty Acid Binding Protein 3,P05413,"Fatty acid-binding protein, heart",FABP3,Synuclein and Synaptic Discorders
+FCN2,Ficolin 2,Q15485,Ficolin-2,FCN2,Inflammation
+FGF2,Fibroblast Growth Factor 2,P09038,Fibroblast growth factor 2,FGF basic,Neurodegeneration
+FLT1,Fms Related Receptor Tyrosine Kinase 1,P17948,Vascular endothelial growth factor receptor 1,VEGF R1,Vascular and Metabolism
+FOLR1,Folate Receptor Alpha,P15328,Folate receptor alpha,FOLR1,Synuclein and Synaptic Discorders
+GDF15,Growth Differentiation Factor 15,Q99988,Growth/differentiation factor 15,GDF15,Inflammation
+GDI1,Rab GDP Dissociation Inhibitor Alpha,P31150,Rab GDP dissociation inhibitor alpha,GDI1,Neurodegeneration
+GDNF,Glial Cell Derived Neurotrophic Factor,P39905,Glial cell line-derived neurotrophic factor,GDNF,Neurodegeneration
+GFAP,Glial Fibrillary Acidic Protein,P14136,Glial fibrillary acidic protein,GFAP,Inflammation
+GOT1,Glutamic-Oxaloacetic Transaminase 1,P17174,"Aspartate aminotransferase, cytoplasmic",GOT1,Neurodegeneration
+HBA1; HBA2,Hemoglobin Subunit Alpha 1,P69905,Hemoglobin subunit alpha 1 |Hemoglobin subunit alpha 2,HB?1; HB?2,Vascular
+HTT,Huntingtin,P42858,Huntingtin,HTT,Synuclein and Synaptic Discorders
+ICAM1,Intercellular Adhesion Molecule 1,P05362,Intercellular adhesion molecule 1,ICAM1,Inflammation
+IFNG,Interferon Gamma,P01579,Interferon gamma,IFN-gamma,Inflammation
+IGF1R,Insulin Like Growth Factor 1 Receptor,P05019,Insulin-like growth factor 1 Receptor,IGF1R,Inflammation
+IGFBP7,Insulin Like Growth Factor Binding Protein 7,Q16270,Insulin-like growth factor-binding protein 7,IGFBP7,Amyloid and Tau Pathologies
+IL10,Interleukin 10,P22301,Interleukin-10,IL-10,Inflammation
+IL12A|IL12B,Interleukin 12A | Interleukin 12B,P29459|P29460,Interleukin 12A | Interleukin 12B,IL-12p70,Inflammation
+IL13,Interleukin 13,P35225,Interleukin-13,IL-13,Inflammation
+IL15,Interleukin 15,P40933,Interleukin-15,IL-15,Inflammation
+IL16,Interleukin 16,Q14005,Pro-interleukin-16,IL-16,Inflammation
+IL17A,Interleukin 17A,Q16552,Interleukin-17A,IL-17A,Inflammation
+IL18,Interleukin 18,Q14116,Interleukin-18,IL-18,Inflammation
+IL1B,Interleukin 1 Beta,P01584,Interleukin-1 beta,IL-1 beta,Inflammation
+IL2,Interleukin 2,P60568,Interleukin-2,IL-2,Inflammation
+IL33,Interleukin 33,O95760,Interleukin-33,IL-33,Inflammation
+IL4,Interleukin 4,P05112,Interleukin-4,IL-4,Inflammation
+IL5,Interleukin 5,P05113,Interleukin-5,IL-5,Inflammation
+IL6,Interleukin 6,P05231,Interleukin-6,IL-6,Inflammation
+IL6R,Interleukin 6 Receptor,P08887,Interleukin-6 receptor subunit alpha,IL-6R a,Synuclein and Synaptic Discorders
+IL7,Interleukin 7,P13232,Interleukin-7,IL-7,Inflammation
+IL9,Interleukin 9,P15248,Interleukin-9,IL-9,Inflammation
+KDR,Kinase Insert Domain Receptor,P35968,Vascular endothelial growth factor receptor 2,VEGF R2,Vascular and Metabolism
+KLK6,Kallikrein Related Peptidase 6,Q92876,Kallikrein-6,KLK6,Amyloid and Tau Pathologies
+MDH1,Malate Dehydrogenase 1,P40925,"Malate dehydrogenase, cytoplasmic",MDH1,Synuclein and Synaptic Discorders
+MME,Membrane Metalloendopeptidase,P08473,Neprilysin,MME,Vascular and Metabolism
+MSLN,Mesothelin,Q13421,Mesothelin,MSLN,Neurodegeneration
+NEFH,Neurofilament Heavy Chain,P12036,Neurofilament heavy polypeptide,NEFH,Neurodegeneration
+NEFL,Neurofilament Light Chain,P07196,Neurofilament light polypeptide,NfL,Neurodegeneration
+NGF,Nerve Growth Factor,P01138,Beta-nerve growth factor,NGF,Synuclein and Synaptic Discorders
+NPTX1,Neuronal Pentraxin 1,Q15818,Neuronal pentraxin-1,NPTX1,Neurodegeneration
+NPTX2,Neuronal Pentraxin 2,P47972,Neuronal pentraxin-2,NPTX2,Neurodegeneration
+NPTXR,Neuronal Pentraxin Receptor,O95502,Neuronal pentraxin receptor,NPTXR,Neurodegeneration
+NPY,Neuropeptide Y,P01303,Pro-neuropeptide Y,NPY,Neurodegeneration
+NRGN,Neurogranin,Q92686,Neurogranin,NRGN,Neurodegeneration
+Oligo-SNCA,Synuclein Alpha,P37840,Alpha-synuclein,SNCAagg,Synuclein and Synaptic Discorders
+PARK7,Parkinsonism Associated Deglycase,Q99497,Parkinson disease protein 7,PARK7,Synuclein and Synaptic Discorders
+PDGFRB,Platelet Derived Growth Factor Receptor Beta,P09619,Platelet-derived growth factor receptor beta,PDGFRB,Vascular and Metabolism
+PDLIM5,PDZ And LIM Domain 5,Q96HC4,PDZ and LIM domain protein 5,PDLIM5,Neurodegeneration
+PGF,Placental Growth Factor,P49763,Placenta growth factor,PLGF,Vascular
+PGK1,Phosphoglycerate Kinase 1,P00558,Phosphoglycerate kinase 1,PGK1,Vascular and Metabolism
+POSTN,Periostin,Q15063,Periostin,POSTN,Vascular and Metabolism
+PRDX6,Peroxiredoxin 6,P30041,Peroxiredoxin-6,PRDX6,Inflammation
+PSEN1,Presenilin 1,P49768,Presenilin-1,PSEN1,Amyloid and Tau Pathologies
+pTau181,Microtubule Associated Protein Tau,P10636,Microtubule-associated protein tau,pTau181,Amyloid and Tau Pathologies
+pTau217,Microtubule Associated Protein Tau,P10636,Microtubule-associated protein tau,pTau217,Amyloid and Tau Pathologies
+pTau231,Microtubule Associated Protein Tau,P10636,Microtubule-associated protein tau,pTau231,Amyloid and Tau Pathologies
+PTN,Pleiotrophin,P21246,Pleiotrophin,PTN,Vascular and Metabolism
+REST,RE1 Silencing Transcription Factor,Q13127,RE1-silencing transcription factor,REST,Neurodegeneration
+RUVBL2,RuvB Like AAA ATPase 2,Q9Y230,RuvB-like 2,RUVBL2,Inflammation
+S100A12,S100 Calcium Binding Protein A12,P80511,Protein S100-A12,S100A12,Inflammation
+S100B,S100 Calcium Binding Protein B,P04271,Protein S100-B,S100B,Inflammation
+SAA1,Serum Amyloid A1,P0DJI8,Serum amyloid A-1 protein,SAA1,Vascular
+SFRP1,Secreted Frizzled Related Protein 1,Q8N474,Secreted frizzled-related protein 1,SFRP1,Amyloid and Tau Pathologies
+SFTPD,Pulmonary Surfactant-Associated Protein,P35247,Pulmonary surfactant-associated protein D,SFTPD,Inflammation
+SLIT2,Slit Guidance Ligand 2,O94813,Slit homolog 2 protein,SLIT2,Inflammation
+SMOC1,SPARC-related modular calcium-binding protein 1,Q9H4F8,SPARC-related modular calcium-binding protein 1,SMOC1,Neurodegeneration
+SNAP25,Synaptosome Associated Protein 25,P60880,Synaptosomal-associated protein 25,SNAP25,Neurodegeneration
+SNCA,Phosphorylated alpha-synuclein,P37840,Phosphorylated alpha-synuclein at serine 129,pSNCA-129,Synuclein and Synaptic Discorders
+SNCA,Synuclein Alpha,P37840,Alpha-synuclein,?-Syn,Synuclein and Synaptic Discorders
+SNCB,Beta-synuclein,Q16143,Beta-synuclein,?-syn,Synuclein and Synaptic Discorders
+SOD1,Superoxide Dismutase 1,P00441,Superoxide dismutase [Cu-Zn],SOD1,Synuclein and Synaptic Discorders
+SQSTM1,Sequestosome 1,Q13501,Sequestosome-1,SQSTM1,Neurodegeneration
+TAFA5,TAFA Chemokine Family Member 5,Q7Z5A7,Chemokine-like protein TAFA-5,TAFA5,Inflammation
+TARDBP,TAR DNA Binding Protein,Q13148,TAR DNA-binding protein 43,TDP43,Synuclein and Synaptic Discorders
+TARDBP,TAR DNA Binding Protein,Q13148,TDP-43 with phosphorylation on serine 409,,Synuclein and Synaptic Discorders
+TEK,TEK Receptor Tyrosine Kinase,Q02763,Angiopoietin-1 receptor,Tie-2/TEK,Inflammation
+TIMP3,TIMP Metallopeptidase Inhibitor 3,P35625,Metalloproteinase inhibitor 3,TIMP3,Inflammation
+TNF,Tumor Necrosis Factor,P01375,Tumor necrosis factor,TNF-a,Inflammation
+TREM1,Triggering Receptor Expressed On Myeloid Cells 1,Q9NP99,Triggering Receptor Expressed On Myeloid Cells 2,sTREM1,Inflammation
+TREM2,Triggering Receptor Expressed on Myeloid Cells 2,Q9NZC2,Triggering receptor expressed on myeloid cells 2,TREM2,Inflammation
+tTau,Microtubule Associated Protein Tau,P10636,Microtubule-associated protein tau,totalTau,Amyloid and Tau Pathologies
+UBB,Polyubiquitin-B,P0CG47,Polyubiquitin-B,UBB,Neurodegeneration
+UCHL1,Ubiquitin C-Terminal Hydrolase L1,P09936,Ubiquitin C-terminal hydrolase L1,UCHL1,Synuclein and Synaptic Discorders
+VCAM1,Vascular Cell Adhesion Molecule 1,P19320,Vascular cell adhesion protein 1,VCAM1/CD106,Inflammation
+VEGFA,Vascular Endothelial Growth Factor A,P15692,Vascular endothelial growth factor A,VEGF-A,Vascular
+VEGFD,Vascular Endothelial Growth Factor D,O43915,Vascular endothelial growth factor D,VEGF-D,Vascular
+VGF,Neurosecretory protein VGF,O15240,Neurosecretory protein VGF,VGF,Synuclein and Synaptic Discorders
+VSNL1,Visinin Like 1,P62760,Visinin-like protein 1,VILIP-1,Neurodegeneration
+YWHAG,Tyrosine 3-Monooxygenase/Tryptophan 5-Monooxygenase Activation Protein Gamma,P61981,14-3-3 protein gamma-B,YWHAG,Neurodegeneration
+YWHAZ,Tyrosine 3-Monooxygenase/Tryptophan 5-Monooxygenase Activation Protein Zeta,P63104,14-3-3 protein zeta/delta,YWHAZ,Neurodegeneration
