@@ -53,7 +53,7 @@ if not st.session_state.authenticated:
             st.session_state.last_active = time.time()
             log_user_activity(email)
             st.success("Login successful!")
-            st.switch_page("submission-forms/password_protect.py")  # Redirect to the main app
+            st.switch_page("TOM/compareProteinPanels.py")  # Redirect to the main app
         else:
             st.error("Invalid email or password. Please try again.")
 
