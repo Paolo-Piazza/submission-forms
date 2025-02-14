@@ -1,0 +1,158 @@
+UniProt ID,Gene,Full Gene Name,Protein Name,Common Name,Function/Classification
+Q15109,AGER,Advanced Glycosylation End-Product Specific Receptor,Advanced glycosylation end product-specific receptor,RAGE,Receptor
+O00253,AGRP,Agouti Related Neuropeptide,Agouti-related protein,AGRP,Other
+Q15389,ANGPT1,Angiopoietin 1,Angiopoietin-1,ANG-1,Growth Factors
+Q10589,BST2,Bone Marrow Stromal Cell Antigen 2,Bone marrow stromal antigen 2,CD317,Other
+P06881,CALCA,Calcitonin Related Polypeptide Alpha,Calcitonin,CGRP-I,Other
+P22362,CCL1,C-C Motif Chemokine Ligand 1,C-C motif chemokine 1,I-309,Chemokines
+P51671,CCL11,C-C Motif Chemokine Ligand 11,Eotaxin,Eotaxin,Chemokines
+Q99616,CCL13,C-C Motif Chemokine Ligand 13,C-C motif chemokine 13,?CP-4,Chemokines
+Q16663,CCL15,C-C Motif Chemokine Ligand 15,C-C motif chemokine 15,MIP-5,Chemokines
+O15467,CCL16,C-C Motif Chemokine Ligand 16,C-C motif chemokine 16,HCC-4,Chemokines
+Q92583,CCL17,C-C Motif Chemokine Ligand 17,C-C motif chemokine 17,TARC,Chemokines
+Q99731,CCL19,C-C Motif Chemokine Ligand 19,C-C motif chemokine 19,MIP-3?,Chemokines
+P13500,CCL2,C-C Motif Chemokine Ligand 2,C-C motif chemokine 2,MCP-1,Chemokines
+P78556,CCL20,C-C Motif Chemokine Ligand 20,C-C motif chemokine 20,MIP-3?,Chemokines
+O00585,CCL21,C-C Motif Chemokine Ligand 21,C-C motif chemokine 21,6Ckine,Chemokines
+O00626,CCL22,C-C Motif Chemokine Ligand 22,C-C motif chemokine 22,MDC,Chemokines
+P55773,CCL23,C-C Motif Chemokine Ligand 23,C-C motif chemokine 23,MPIF-1,Chemokines
+O00175,CCL24,C-C Motif Chemokine Ligand 24,C-C motif chemokine 24,Eotaxin-2,Chemokines
+Q9Y4X3,CCL27,C-C Motif Chemokine Ligand 27,C-C motif chemokine 27,CTACK,Chemokines
+P10147,CCL3,C-C Motif Chemokine Ligand 3,C-C motif chemokine 3,MIP-1?,Chemokines
+P80098,CCL7,C-C Motif Chemokine Ligand 7,C-C motif chemokine 7,MCP-3,Chemokines
+P80075,CCL8,C-C Motif Chemokine Ligand 8,C-C motif chemokine 8,MCP-2,Chemokines
+Q8TD46,CD200R1,CD200 Receptor 1,Cell surface glycoprotein CD200 receptor 1,CD200R1,Regulation
+P26842,CD27,CD27 Molecule,CD27 antigen,TNFRSF7,Regulation
+Q9NZQ7,CD274,CD274 Molecule,Programmed cell death 1 ligand 1,PD-L1,Regulation
+P25942,CD40,CD40 Molecule,Tumor necrosis factor receptor superfamily member 5,CD40,Receptor
+P29965,CD40LG,CD40 Ligand,CD40 ligand,CD40 ligand,Regulation
+P15529,CD46,CD46 Molecule,Membrane cofactor protein,CD46,Regulation
+P33681,CD80,CD80 Molecule,T-lymphocyte activation antigen CD80,CD80,Regulation
+Q01151,CD83,CD83 Molecule,CD83 antigen,CD83,Regulation
+Q9NPY3,CD93,CD93 Molecule,Complement component C1q receptor,CD93,Regulation
+P06731,CEACAM5,CEA Cell Adhesion Molecule 5,Carcinoembryonic antigen-related cell adhesion molecule 5,CEA,Other
+P36222,CHI3L1,Chitinase 3 Like 1,Chitinase-3-like protein 1,YKL-40,Regulation
+Q9UMR7,CLEC4A,C-Type Lectin Domain Family 4 Member A,C-type lectin domain family 4 member A,CLEC4A,Regulation
+P09603,CSF1,Colony Stimulating Factor 1,Macrophage colony-stimulating factor 1,M-CSF,Cytokines
+P04141,CSF2,Colony Stimulating Factor 2,Granulocyte-macrophage colony-stimulating factor,GM-CSF,Cytokines
+P32927,CSF2RB,Colony Stimulating Factor 2 Receptor Subunit Beta,Cytokine receptor common subunit beta,CSF2RB,Receptor
+P09919,CSF3,Colony Stimulating Factor 3,Granulocyte colony-stimulating factor,G-CSF,Cytokines
+Q99062,CSF3R,Colony Stimulating Factor 3 Receptor,Granulocyte colony-stimulating factor receptor,CSF3R,Receptor
+Q16619,CTF1,Cardiotrophin 1,Cardiotrophin-1,CTF1,Cytokines
+P16410,CTLA4,Cytotoxic T-Lymphocyte Associated Protein 4,Cytotoxic T-lymphocyte protein 4,CTLA-4,Regulation
+P78423,CX3CL1,C-X3-C Motif Chemokine Ligand 1,Fractalkine,Fractalkine,Cytokines
+P78310,CXADR,CXADR Ig-Like Cell Adhesion Molecule,Coxsackievirus and adenovirus receptor,CXADR,Receptor
+P09341,CXCL1,C-X-C Motif Chemokine Ligand 1,Growth-regulated alpha protein,GRO?,Chemokines
+P02778,CXCL10,C-X-C Motif Chemokine Ligand 10,C-X-C motif chemokine 10,IP-10,Chemokines
+O14625,CXCL11,C-X-C Motif Chemokine Ligand 11,C-X-C motif chemokine 11,I-TAC,Chemokines
+O43927,CXCL13,C-X-C Motif Chemokine Ligand 13,C-X-C motif chemokine 13,BCA-1,Chemokines
+Q9H2A7,CXCL16,C-X-C Motif Chemokine Ligand 16,C-X-C motif chemokine 16,CXCL16,Chemokines
+P19875,CXCL2,C-X-C Motif Chemokine Ligand 2,C-X-C motif chemokine 2,GRO?,Chemokines
+P19876,CXCL3,C-X-C Motif Chemokine Ligand 3,C-X-C motif chemokine 3,GRO?,Chemokines
+P42830,CXCL5,C-X-C Motif Chemokine Ligand 5,C-X-C motif chemokine 5,???-78,Chemokines
+P01133,EGF,Epidermal Growth Factor,Pro-epidermal growth factor,EGF,Growth Factors
+P01588,EPO,Erythropoietin,Erythropoietin,EPO,Other
+Q9NSA1,FGF21,Fibroblast Growth Factor 21,Fibroblast growth factor 21,FGF21,Growth Factors
+P49771,FLT3LG,Fms Related Receptor Tyrosine Kinase 3 Ligand,Fms-related tyrosine kinase 3 ligand,FLT3LG,Cytokines
+Q9UK05,GDF2,Growth Differentiation Factor 2,Growth/differentiation factor 2,GDF2,Growth Factors
+P28799,GRN,Granulin Precursor,Progranulin,Progranulin,Other
+Q96D42,HAVCR1,Hepatitis A Virus Cellular Receptor 1,Hepatitis A virus cellular receptor 1,KIM-1,Receptor
+P14210,HGF,Hepatocyte Growth Factor,Hepatocyte growth factor,HGF,Growth Factors
+P05362,ICAM1,Intercellular Adhesion Molecule 1,Intercellular adhesion molecule 1,CD54,Other
+P01562,IFNA1; IFNA13,Interferon Alpha 1; Interferon Alpha 13,Interferon alpha-1 | Interferon alpha 13,IFN?1,Cytokines
+P01574,IFNB1,Interferon Beta 1,Interferon beta-1,IFN-?1,Cytokines
+P01579,IFNG,Interferon Gamma,Interferon gamma,IFN-?,Cytokines
+Q8IZJ0;Q8IZI9,IFNL2;IFNL3,Interferon Lambda 2 ; Interferon Lambda 3,Interferon lambda-2 ; Interferon lambda-3,IL-28A; IL-28B,Cytokines
+P05000,IFNW1,Interferon Omega 1,Interferon omega-1,IFN-?1,Cytokines
+Q9Y6K9,IKBKG,Inhibitor Of Nuclear Factor Kappa B Kinase Regulatory Subunit Gamma,NF-kappa-B essential modulator,NEMO,Cytokines
+Q08334,IL10RB,Interleukin 10 Receptor Subunit Beta,Interleukin-10 receptor subunit beta,IL-10RB,Receptor
+P29460,IL12B,Interleukin 12B,Interleukin-12 subunit beta,IL-12p40,Cytokines
+P42701,IL12RB1,Interleukin 12 Receptor Subunit Beta 1,Interleukin-12 receptor subunit beta-1,IL-12RB1,Receptor
+Q14627,IL13RA2,Interleukin 13 Receptor Subunit Alpha 2,Interleukin-13 receptor subunit alpha-2,IL-13RA2,Receptor
+P40933,IL15,Interleukin 15,Interleukin-15,IL-15,Cytokines
+Q16552,IL17A,Interleukin 17A,Interleukin-17A,IL-17A,Cytokines
+Q16552|Q96PD4,IL17A|IL17F,Interleukin 17A|Interleukin 17F,Interleukin-17A |Interleukin-17F,IL-17A/F,Cytokines
+Q9UHF5,IL17B,Interleukin 17B,Interleukin-17B,IL-17B,Cytokines
+Q9P0M4,IL17C,Interleukin 17C,Interleukin-17C,IL-17C,Cytokines
+Q96PD4,IL17F,Interleukin 17F,Interleukin-17F,IL-17F,Cytokines
+Q96F46,IL17RA,Interleukin 17 Receptor A,Interleukin-17 receptor A,CD217,Receptor
+Q9NRM6,IL17RB,Interleukin 17 Receptor B,Interleukin-17 receptor B,IL-17RB,Receptor
+O95998,IL18BP,Interleukin 18 Binding Protein,Interleukin-18-binding protein,IL-18BP,Receptor
+Q13478,IL18R1,Interleukin 18 Receptor 1,Interleukin-18 receptor 1,IL-18R1,Receptor
+Q9UHD0,IL19,Interleukin 19,Interleukin-19,IL-19,Cytokines
+P01584,IL1B,Interleukin 1 Beta,Interleukin-1 beta,IL-1B,Cytokines
+P14778,IL1R1,Interleukin 1 Receptor Type 1,Interleukin-1 receptor type 1,CD121a,Receptor
+P27930,IL1R2,Interleukin 1 Receptor Type 2,Interleukin-1 receptor type 2,CD121b,Receptor
+Q01638,IL1RL1,Interleukin 1 Receptor Like 1,Interleukin-1 receptor-like 1,IL1RL1,Receptor
+Q9NYY1,IL20,Interleukin 20,Interleukin-20,IL-20,Cytokines
+Q9GZX6,IL22,Interleukin 22,Interleukin-22,IL-22,Cytokines
+Q8NEV9|Q14213,IL27|EBI3,Interleukin 27,Interleukin-27 | Interleukin-27 subunit beta,IL-27,Cytokines
+P14784,IL2RB,Interleukin 2 Receptor Subunit Beta,Interleukin-2 receptor subunit beta,CD122,Receptor
+O95760,IL33,Interleukin 33,Interleukin-33,IL-33,Cytokines
+Q6ZMJ4,IL34,Interleukin 34,Interleukin-34,IL-34,Cytokines
+P26951,IL3RA,Interleukin 3 Receptor Subunit Alpha,Interleukin-3 receptor subunit alpha,IL-3RA,Receptor
+P05112,IL4,Interleukin 4,Interleukin-4,IL-4,Cytokines
+P24394,IL4R,Interleukin 4 Receptor,Interleukin-4 receptor subunit alpha,IL-4RA,Receptor
+P05113,IL5,Interleukin 5,Interleukin-5,IL-5,cytokines
+Q01344,IL5RA,Interleukin 5 Receptor Subunit Alpha,Interleukin-5 receptor subunit alpha,IL-5RA,Receptor
+P05231,IL6,Interleukin 6,Interleukin-6,IL-6,Cytokines
+P08887,IL6R,Interleukin 6 Receptor,Interleukin-6 receptor subunit alpha,IL-6R,Receptor
+P13232,IL7,Interleukin 7,Interleukin-7,IL-7,Cytokines
+P16871,IL7R,Interleukin 7 Receptor,Interleukin-7 receptor subunit alpha,IL-7RA,Receptor
+P15248,IL9,Interleukin 9,Interleukin-9,IL-9,Cytokines
+Q9NWZ3,IRAK4,Interleukin 1 Receptor Associate Kinase 4,Interleukin-1 receptor-associated kinase 4,IRAK-4,Other
+P35968,KDR,Kinase Insert Domain Receptor,Vascular endothelial growth factor receptor 2,VEGFR2,Receptor
+P21583,KITLG,KIT Ligand,Kit ligand,KITLG,Other
+P26718,KLRK1,Killer Cell Lectin Like Receptor K1,NKG2-D type II integral membrane protein,NKG2D,Receptor
+P18627,LAG3,Lymphocyte Activating 3,Lymphocyte activation gene 3 protein,LAG-3,Receptor
+Q9UQV4,LAMP3,Lysosomal Associated Membrane Protein 3,Lysosome-associated membrane glycoprotein 3,LAMP-3,Other
+O00182,LGALS9,Galectin 9,Galectin-9,Galectin-9,Other
+P15018,LIF,LIF Interleukin 6 Family Cytokine,Leukemia inhibitory factor,LIF,Cytokines
+Q8N423,LILRB2,Leukocyte Immunoglobulin Like Receptor B2,Leukocyte immunoglobulin-like receptor subfamily B member 2,ILT4,Receptor
+P01374,LTA,Lymphotoxin Alpha,Lymphotoxin-alpha,TNF-?,Cytokines
+Q12866,MERTK,"MER Proto-Oncogene, Tyrosine Kinase",Tyrosine-protein kinase Mer,MER,Receptor
+Q29980,MICB,MHC Class I Polypeptide-Related Sequence B,MHC class I polypeptide-related sequence B,MICB,Other
+P39900,MMP12,Matrix Metallopeptidase 12,Macrophage metalloelastase,MMP-12,Other
+P08254,MMP3,Matrix Metallopeptidase 3,Stromelysin-1,MMP-3,Other
+P22894,MMP8,Matrix Metallopeptidase 8,Neutrophil collagenase,MMP-8,Other
+P14780,MMP9,Matrix Metallopeptidase 9,Matrix metalloproteinase-9,MMP-9,Other
+O76036,NCR1,Natural Cytotoxicity Triggering Receptor 1,Natural cytotoxicity triggering receptor 1,NCR1,Receptor
+P01138,NGF,Nerve Growth Factor,Beta-nerve growth factor,?-NGF,Growth Factors
+P13725,OSM,Oncostatin-M,Oncostatin-M,Oncostatin-M,Cytokines
+Q15116,PDCD1,Programmed Cell Death 1,Programmed cell death protein 1,PD-1,Other
+Q9BQ51,PDCD1LG2,Programmed Cell Death 1 Ligand 2,Programmed cell death 1 ligand 2,PD-L2,Other
+P01127,PDGFB,Platelet Derived Growth Factor Subunit B,Platelet-derived growth factor subunit B,PDGFB,Growth Factors
+P26022,PTX3,Pentraxin 3,Pentraxin-related protein PTX3,PTX3,Other
+P80511,S100A12,S100 Calcium Binding Protein A12,Protein S100-A12,ENRAGE,Other
+P16581,SELE,Selectin E,E-selectin,E-selectin,Other
+P78324,SIRPA,Signal Regulatory Protein Alpha,Tyrosine-protein phosphatase non-receptor type substrate 1,CD172a,receptor
+Q13291,SLAMF1,Signaling Lymphocytic Activation Molecule Family Member 1,Signaling lymphocytic activation molecule,CD150,Receptor
+Q7Z5A7,TAFA5,TAFA Chemokine Family Member 5,Chemokine-like protein TAFA-5,TAFA5,Chemokines
+Q02763,TEK,TEK Receptor Tyrosine Kinase,Angiopoietin-1 receptor,TIE-2,Receptor
+P40225,THPO,Thrombopoietin,Thrombopoietin,Thrombopoietin,Cytokines
+P16035,TIMP2,TIMP Metallopeptidase Inhibitor 2,Metalloproteinase inhibitor 2,TIMP-2,Other
+O15455,TLR3,Toll Like Receptor 3,Toll-like receptor 3,TLR3,Receptor
+Q9Y6Q6,TNFRSF11A,Tumor Necrosis Factor Receptor Superfamily Member 11a,Tumor necrosis factor receptor superfamily member 11A,RANK,Receptor
+O14836,TNFRSF13B,Tumor Necrosis Factor Receptor Superfamily Member 13B,Tumor necrosis factor receptor superfamily member 13B,TACI,Receptor
+Q96RJ3,TNFRSF13C,Tumor Necrosis Factor Receptor Superfamily Member 13C,Tumor necrosis factor receptor superfamily member 13C,BAFF-R,Receptor
+Q92956,TNFRSF14,Tumor Necrosis Factor Receptor Superfamily Member 14,Tumor necrosis factor receptor superfamily member 14,HVEM,Receptor
+Q02223,TNFRSF17,Tumor Necrosis Factor Superfamily Member 17,Tumor necrosis factor receptor superfamily member 17,BCMA,Receptor
+Q9Y5U5,TNFRSF18,Tumor Necrosis Factor Receptor Superfamily Member 18,Tumor necrosis factor receptor superfamily member 18,GITR,Receptor
+P19438,TNFRSF1A,Tumor Necrosis Factor Receptor Superfamily Member 1A,Tumor necrosis factor receptor superfamily member 1A,CD120a,receptor
+P20333,TNFRSF1B,Tumor Necrosis Factor Receptor Superfamily Member 1B,Tumor necrosis factor receptor superfamily member 1B,CD120b,Receptor
+P28908,TNFRSF8,Tumor Necrosis Factor Receptor Superfamily Member 8,Tumor necrosis factor receptor superfamily member 8,CD30,Receptor
+P50591,TNFSF10,Tumor Necrosis Factor Superfamily Member 10,Tumor necrosis factor ligand superfamily member 10,TRAIL,Cytokines
+O95150,TNFSF15,Tumor Necrosis Factor Ligand Superfamily Member 15,Tumor necrosis factor ligand superfamily member 15,TL1A,Cytokines
+Q9UNG2,TNFSF18,Tumor Necrosis Factor Superfamily Member 18,Tumor necrosis factor ligand superfamily member 18,GITRL,Cytokines
+P32971,TNFSF8,Tumor Necrosis Factor Superfamily Member 8,Tumor necrosis factor ligand superfamily member 8,CD30L,Cytokines
+Q9NP99,TREM1,Triggering Receptor Expressed On Myeloid Cells 1,Triggering receptor expressed on myeloid cells 1,TREM-1,Receptor
+Q9NZC2,TREM2,Triggering Receptor Expressed On Myeloid Cells 2,Triggering receptor expressed on myeloid cells 2,TREM-2,Receptor
+P15692,VEGFA,Vascular Endothelial Growth Factor A,Vascular endothelial growth factor A,VEGF-A,Growth Factors
+P49767,VEGFC,Vascular Endothelial Growth Factor C,Vascular endothelial growth factor C,VEGF-C,Growth Factors
+O43915,VEGFD,Vascular Endothelial Growth Factor D,Vascular endothelial growth factor D,VEGF-D,Growth Factors
+P62760,VSNL1,Visinin Like 1,Visinin-like protein 1,VILIP,Other
+Q6UX27,VSTM1,V-Set And Transmembrane Domain Containing 1,V-set and transmembrane domain-containing protein 1,VSTM1,Other
+O00755,WNT7A,Wnt Family Member 7A,Protein Wnt-7a,Wnt-7A,Other
+P29459|P29460,IL12A|IL12B,Interleukin 12A | Interleukin 12B,Interleukin-12 subunit alpha,IL-12p70,Cytokines
+P49763,PGF,Placental Growth Factor,Placenta growth factor,PIGF,Growth Factors
+Q969D9,TSLP,Thymic Stromal Lymphopoietin,Thymic Stromal Lymphopoietin,TSLP,Cytokines
