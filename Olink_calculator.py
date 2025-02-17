@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd
 
 # Load pricing and rule data
-prices_csv_path = "prices_data.csv"  # Ensure this is the correct path
-rules_csv_path = "pricing_rules.csv"
+prices_csv_path = "olink_cost_files/prices_data.csv"  # Ensure this is the correct path
+rules_csv_path = "olink_cost_files/pricing_rules.csv"
 prices_df = pd.read_csv(prices_csv_path)
 rules_df = pd.read_csv(rules_csv_path)
 
