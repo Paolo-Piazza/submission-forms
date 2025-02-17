@@ -7,9 +7,9 @@ Neurology I,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library P
 Neurology II,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library Preparation_Olink Explore 384 -(single)
 Oncology I,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library Preparation_Olink Explore 384 -(single)
 Oncology II,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library Preparation_Olink Explore 384 -(single)
-Reveal,86,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Standalone,Library Preparation_Olink Explore Reveal -(single)
+Reveal,86,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library Preparation_Olink Explore Reveal -(single)
 Focus,120,None,0.501,Combinable,Focus
-Explore HT (86),86,Olink_Sequencing_NovaSeq6000_35_SR_S4,0.501,Standalone,Library Preparation_Olink Explore HT (86)
+Explore HT (86),86,Olink_Sequencing_NovaSeq6000_35_SR_S4,0.501,Combinable,Library Preparation_Olink Explore HT (86)
 T96_Cardio_III.csv,88,No sequencing needed,0.501,Combinable,Target 96
 T96_Org_dam.csv,88,No sequencing needed,0.501,Combinable,Target 96
 T96_OncIII.csv,88,No sequencing needed,0.501,Combinable,Target 96
