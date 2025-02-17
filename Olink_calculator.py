@@ -7,6 +7,15 @@ rules_csv_path = "olink_cost_files/pricing_rules.csv"
 prices_df = pd.read_csv(prices_csv_path)
 rules_df = pd.read_csv(rules_csv_path)
 
+import streamlit as st
+import pandas as pd
+
+# Load pricing and rule data
+prices_csv_path = "olink_cost_files/prices_data.csv"  # Ensure this is the correct path
+rules_csv_path = "olink_cost_files/pricing_rules.csv"
+prices_df = pd.read_csv(prices_csv_path)
+rules_df = pd.read_csv(rules_csv_path)
+
 # Streamlit UI
 st.title("Olink Panel Pricing Calculator")
 
@@ -143,7 +152,12 @@ for seq_kit, count in sequencing_counts.items():
 # Display total cost
 st.subheader("Total Experiment Cost")
 st.write(f"Total Cost for the Experiment ({selected_account}): {total_cost:.2f}")
-export_data.append(["Total Cost", total_cost])
+if selected_account in ["External Academic", "External Commercial"]:
+    vat = total_cost * 0.2
+    st.write(f"VAT (20%): {vat:.2f}")
+    st.write(f"Total Cost Including VAT: {total_cost + vat:.2f}")
+    export_data.append(["VAT (20%)", vat])
+    export_data.append(["Total Cost Including VAT", total_cost + vat])
 
 # Convert data to DataFrame and allow download
 df_export = pd.DataFrame(export_data)
