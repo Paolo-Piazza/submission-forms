@@ -13,6 +13,7 @@ st.title("Olink Panel Pricing Calculator")
 # User information input
 prepared_by = st.text_input("Prepared by (Your Name)")
 prepared_for = st.text_input("Prepared for (Name/Email)")
+notes = st.text_area("Additional Notes")
 
 # Account type selection
 account_types = ["Internal", "External Academic", "External Commercial"]
@@ -86,7 +87,7 @@ panel_breakdown = {}
 product_counts = {}
 sequencing_counts = {}
 total_cost = 0.0
-export_data = [["Prepared by", prepared_by], ["Prepared for", prepared_for], ["Account Type", selected_account]]
+export_data = [["Prepared by", prepared_by], ["Prepared for", prepared_for], ["Account Type", selected_account], ["Number of Samples", num_samples], ["Notes", notes]]
 if num_samples > 0 and selected_panels:
     for panel in selected_panels:
         batch_size, product_name, sequencing_kit, sequencing_qty = get_panel_details(panel)
@@ -138,6 +139,11 @@ for seq_kit, count in sequencing_counts.items():
     total_cost += cost
     st.write(f"{seq_kit}: {count} x {unit_price:.2f} = {cost:.2f}")
     export_data.append([seq_kit, count, unit_price, cost])
+
+# Display total cost
+st.subheader("Total Experiment Cost")
+st.write(f"Total Cost for the Experiment ({selected_account}): {total_cost:.2f}")
+export_data.append(["Total Cost", total_cost])
 
 # Convert data to DataFrame and allow download
 df_export = pd.DataFrame(export_data)
