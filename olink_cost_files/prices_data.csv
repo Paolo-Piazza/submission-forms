@@ -10,22 +10,22 @@ Oncology II,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library P
 Reveal,86,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Standalone,Library Preparation_Olink Explore Reveal -(single)
 Focus,120,None,0.501,Combinable,Focus
 Explore HT (86),86,Olink_Sequencing_NovaSeq6000_35_SR_S4,0.501,Standalone,Library Preparation_Olink Explore HT (86)
-Olink_T96_Cardio_III.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Org_dam.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_OncIII.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_Flex.csv,40,No sequencing needed,0.501,Combinable,Flex
-Olink_T96_Neuro.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Cardio_II.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Met.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Onc_II.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Im_res.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Cardio.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Dev.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Neu_exp.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T48_Mouse_cyt.csv,40,No sequencing needed,0.501,Combinable,Target 48
-Olink_T96_Cell_reg.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T96_Im_onc.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T48_Cyt.csv,40,No sequencing needed,0.501,Combinable,Target 48
-Olink_T96_Inf.csv,88,No sequencing needed,0.501,Combinable,Target 96
-Olink_T48_Im_sur.csv,40,No sequencing needed,0.501,Combinable,Target 48
-Olink_T96_Mouse_exp.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Cardio_III.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Org_dam.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_OncIII.csv,88,No sequencing needed,0.501,Combinable,Target 96
+Flex.csv,40,No sequencing needed,0.501,Combinable,Flex
+T96_Neuro.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Cardio_II.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Met.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Onc_II.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Im_res.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Cardio.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Dev.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Neu_exp.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T48_Mouse_cyt.csv,40,No sequencing needed,0.501,Combinable,Target 48
+T96_Cell_reg.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T96_Im_onc.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T48_Cyt.csv,40,No sequencing needed,0.501,Combinable,Target 48
+T96_Inf.csv,88,No sequencing needed,0.501,Combinable,Target 96
+T48_Im_sur.csv,40,No sequencing needed,0.501,Combinable,Target 48
+T96_Mouse_exp.csv,88,No sequencing needed,0.501,Combinable,Target 96
