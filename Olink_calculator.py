@@ -1,23 +1,26 @@
 import streamlit as st
 import pandas as pd
+from datetime import datetime
 
-# Load pricing and rule data
-prices_csv_path = "olink_cost_files/prices_data.csv"  # Ensure this is the correct path
-rules_csv_path = "olink_cost_files/pricing_rules.csv"
-prices_df = pd.read_csv(prices_csv_path)
-rules_df = pd.read_csv(rules_csv_path)
-
-import streamlit as st
-import pandas as pd
-
-# Load pricing and rule data
-prices_csv_path = "olink_cost_files/prices_data.csv"  # Ensure this is the correct path
-rules_csv_path = "olink_cost_files/pricing_rules.csv"
-prices_df = pd.read_csv(prices_csv_path)
-rules_df = pd.read_csv(rules_csv_path)
+# Load category mapping
+categories_csv_path = "U:/categories.csv"  # Ensure this file exists with category-to-file mapping
+categories_df = pd.read_csv(categories_csv_path)
 
 # Streamlit UI
 st.title("Olink Panel Pricing Calculator")
+
+# Select category to determine which pricing file to load
+st.subheader("Select Category")
+category_options = categories_df["Category Name"].tolist()
+selected_category = st.radio("Choose a panel category:", category_options)
+
+# Get corresponding pricing file
+selected_file = categories_df[categories_df["Category Name"] == selected_category]["Prices File"].values[0]
+
+# Load the selected pricing data
+prices_df = pd.read_csv(selected_file)
+rules_csv_path = "U:/pricing_rules.csv"
+rules_df = pd.read_csv(rules_csv_path)
 
 # User information input
 prepared_by = st.text_input("Prepared by (Your Name)")
@@ -159,6 +162,19 @@ if selected_account in ["External Academic", "External Commercial"]:
     export_data.append(["VAT (20%)", vat])
     export_data.append(["Total Cost Including VAT", total_cost + vat])
 
-# Convert data to DataFrame and allow download
-df_export = pd.DataFrame(export_data)
-st.download_button("Download CSV", df_export.to_csv(index=False, header=False), "pricing_summary.csv", "text/csv")
+# Format CSV data
+csv_data = []
+date_today = datetime.today().strftime('%Y-%m-%d')
+header = ["Date", "Prepared by", "Prepared for", "Account Type", "Category", "Number of Samples", "Notes", "Panels", "Products", "Sequencing Kits", "Total Cost", "VAT", "Total Including VAT"]
+
+# Prepare data rows
+panels_str = ", ".join([f"{count} {panel}" for panel, count in panel_breakdown.items()])
+products_str = ", ".join([f"{count} {product}" for product, count in product_counts.items()])
+sequencing_str = ", ".join([f"{count} {seq_kit}" for seq_kit, count in sequencing_counts.items()])
+vat = total_cost * 0.2 if selected_account in ["External Academic", "External Commercial"] else 0
+
+data_row = [date_today, prepared_by, prepared_for, selected_account, selected_category, num_samples, notes, panels_str, products_str, sequencing_str, total_cost, vat, total_cost + vat]
+csv_data.append(data_row)
+
+df_export = pd.DataFrame(csv_data, columns=header)
+st.download_button("Download CSV", df_export.to_csv(index=False), "pricing_summary.csv", "text/csv")
