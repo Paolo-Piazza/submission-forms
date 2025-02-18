@@ -3,7 +3,7 @@ import pandas as pd
 from datetime import datetime
 
 # Load category mapping
-categories_csv_path = "U:/categories.csv"  # Ensure this file exists with category-to-file mapping
+categories_csv_path = "olink_cost_files/categories.csv"  # Ensure this file exists with category-to-file mapping
 categories_df = pd.read_csv(categories_csv_path)
 
 # Streamlit UI
@@ -19,7 +19,7 @@ selected_file = categories_df[categories_df["Category Name"] == selected_categor
 
 # Load the selected pricing data
 prices_df = pd.read_csv(selected_file)
-rules_csv_path = "U:/pricing_rules.csv"
+rules_csv_path = "olink_cost_files/pricing_rules.csv"
 rules_df = pd.read_csv(rules_csv_path)
 
 # User information input
