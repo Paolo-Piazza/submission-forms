@@ -14,3 +14,6 @@ Library Preparation_Olink Explore HT (86),34628.85,38091.74,41554.62,2,Library P
 Library Preparation_Olink Explore HT,69257.68221,76183.45043,83109.21865,NA,NA,Olink_Sequencing_NovaSeq6000_35_SR_S4
 No sequencing needed,0,0,0,NA,NA,NA
 Alamar_Aviti_Sequencing_75PE,	1359.7,	1495.67,	1631.64,	NA,	NA,	NA
+Nulisa_Inf_Seq,	10834,	11917.29,	13000.68,	NA,	NA,	Alamar_Aviti_Sequencing_75PE
+Nulisa_InfAQ_Seq,	13508,	14859.22,	16210.06,	NA,	NA,	Alamar_Aviti_Sequencing_75PE
+Nulisa_CNS_Seq,	9051,	9956,	10861.09,	NA,	NA,	Alamar_Aviti_Sequencing_75PE
