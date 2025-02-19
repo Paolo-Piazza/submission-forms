@@ -1,20 +1,20 @@
 Panel Name,Batch Size,Sequencing Kit,Sequencing Qty per Batch,Panel type,Product Name
-T96_Cardio_III,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Org_dam,88,No sequencing needed,0.501,Combinable,Target 96
-T96_OncIII,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Cardiometabolic,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Cardiovascular II,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Cardiovascular III,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Organ Damage,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Oncology II,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Oncology III,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Neurology,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Metabolism,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Immune Response,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Development,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Neuro Exploratory,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Cell Regulation,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Immuno-Oncology,88,No sequencing needed,0.501,Combinable,Target 96
+T96 Inflammation,88,No sequencing needed,0.501,Combinable,Target 96
+T48 Cytokine,40,No sequencing needed,0.501,Combinable,Target 48
+T48 Immune Surveillance,40,No sequencing needed,0.501,Combinable,Target 48
+T96 Mouse Exploratory,88,No sequencing needed,0.501,Combinable,Target 96
+T48 Mouse Cytokine,40,No sequencing needed,0.501,Combinable,Target 48
 Flex,40,No sequencing needed,0.501,Combinable,Flex
-T96_Neuro,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Cardio_II,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Met,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Onc_II,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Im_res,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Cardio,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Dev,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Neu_exp,88,No sequencing needed,0.501,Combinable,Target 96
-T48_Mouse_cyt,40,No sequencing needed,0.501,Combinable,Target 48
-T96_Cell_reg,88,No sequencing needed,0.501,Combinable,Target 96
-T96_Im_onc,88,No sequencing needed,0.501,Combinable,Target 96
-T48_Cyt,40,No sequencing needed,0.501,Combinable,Target 48
-T96_Inf,88,No sequencing needed,0.501,Combinable,Target 96
-T48_Im_sur,40,No sequencing needed,0.501,Combinable,Target 48
-T96_Mouse_exp,88,No sequencing needed,0.501,Combinable,Target 96
