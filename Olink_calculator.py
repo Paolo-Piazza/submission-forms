@@ -5,27 +5,6 @@ from datetime import datetime
 # Set page configuration for full width
 st.set_page_config(layout="wide")
 
-# Custom CSS for intermediate width
-# Improved Custom CSS for intermediate width
-def set_custom_css():
-    st.markdown(
-        """
-        <style>
-        .main .block-container {
-            max-width: 60px !important;
-            margin: auto !important;
-            padding-left: 2rem !important;
-            padding-right: 2rem !important;
-        }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
-import time
-time.sleep(1)  # Delay slightly for CSS override
-set_custom_css()
-
 #Logo
 st.image("olink_cost_files/MTP_logo_RGB.png", caption="")
 
