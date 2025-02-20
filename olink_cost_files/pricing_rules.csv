@@ -8,8 +8,8 @@ Olink_Sequencing_NovaSeq6000_35_SR_S4,16895.13,18584.64,20274.16,NA,NA,NA
 Olink_Sequencing_NovaSeq6000_100_SR_SP,3552.9,3908.19,4263.48,NA,NA,NA
 Target 48,4593.15,5052.46,5511.78,NA,NA,No sequencing needed
 Target 96,6883.15,7571.465,8259.78,NA,NA,No sequencing needed
-Flex 21,4262.5,4688.75,5115,NA,NA,No sequencing needed
-Flex 15,4047.5,4452.25,4857,NA,NA,No sequencing needed
+Flex 21,4262.5,4688.75,5115,NA,> 2,No sequencing needed
+Flex 15,4047.5,4452.25,4857,NA,> 2,No sequencing needed
 Focus,0,0,0,NA,NA,No sequencing needed
 Library Preparation_Olink Explore HT (86),34628.85,38091.74,41554.62,2,Library Preparation_Olink Explore HT,Olink_Sequencing_NovaSeq6000_35_SR_S4
 Library Preparation_Olink Explore HT,69257.68221,76183.45043,83109.21865,NA,NA,Olink_Sequencing_NovaSeq6000_35_SR_S4
