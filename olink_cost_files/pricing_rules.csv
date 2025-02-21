@@ -20,3 +20,17 @@ Nulisa_InfAQ_Seq,13508,14859.22,16210.06,NA,NA,NA,NA,Alamar_Aviti_Sequencing_75P
 Nulisa_CNS_Seq,"	9051",9956,10861.09,NA,NA,NA,NA,Alamar_Aviti_Sequencing_75PE
 Library Preparation_PolyA Enrichment,223,245.3,267.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library Preparation_Globin Depletion,535,588.5,642,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_PolyA Enrichment (8 samples),223,245.3,267.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Globin Depletion (8 samples),535,588.5,642,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Globin Depletion_Mini (8 samples),368.26,405.086,441.912,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Ribo Depletion (8 samples),487,535.7,584.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Ribo Depletion_Mini (8 samples),343,377.3,411.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Bacterial Depletion (8 samples),503,553.3,603.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Bacterial Depletion_Mini (8 samples),351.42,386.562,421.704,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Total RNA (8 samples),1212,1333.2,1454.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Total RNA_Mini (8 samples),1092,1201.2,1310.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Amplicon (8 samples),606,666.6,727.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library preparation_ATAC (8 samples),1316,1447.6,1579.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+qPCR (8 samples),136,149.6,163.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library preparation_NEB-UIIFS_Illumina (8 samples),1378,1515.8,1653.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library preparation_NEB-UIIFS_Element (8 samples),1402,1542.2,1682.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
