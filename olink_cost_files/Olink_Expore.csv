@@ -9,5 +9,4 @@ Oncology I,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library Pr
 Oncology II,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Combinable,Library Preparation_Olink Explore 384 -(single)
 Reveal,86,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.501,Standalone,Library Preparation_Olink Explore Reveal
 Explore HT (86),86,Olink_Sequencing_NovaSeq6000_35_SR_S4,0.501,Standalone,Library Preparation_Olink Explore HT (86)
-3k (88 samples),88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.251,Standalone,3k (88 samples)
-3k (352 samples),88,Olink_Sequencing_NovaSeq6000_35_SR_S4,0.501,Standalone,3k (88 samples)
+Explore 3k,88,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.251,Standalone,3k (88 samples)
