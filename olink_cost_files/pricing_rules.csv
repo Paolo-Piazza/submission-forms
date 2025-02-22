@@ -35,3 +35,4 @@ qPCR (8 samples),136,149.6,163.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR
 Library preparation_NEB-UIIFS_Illumina (8 samples),1378,1515.8,1653.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library preparation_NEB-UIIFS_Element (8 samples),1402,1542.2,1682.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
 3k,8888,8888.96,9999.77,NA,NA,2,3k,Olink_Sequencing_NovaSeq6000_35_SR_S4
+Library Preparation_Olink Explore 384 -88s (4X384),29318.14,32249.96,35181.77,NA,NA,2,3k,Olink_Sequencing_NovaSeq6000_35_SR_S4
