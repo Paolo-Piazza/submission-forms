@@ -124,11 +124,10 @@ for panel, count in panel_breakdown.items():
     st.write(f"Panel: {panel}, Quantity: {count}")
 
 # Adjust sequencing kits based on bundle changes
-sequencing_adjustments = {}
+
 for product, seq_kit in sequencing_adjustments.items():
     if product in sequencing_counts:
         sequencing_counts[seq_kit] = sequencing_counts.pop(product)
-
 
 # Display sequencing kit breakdown
 st.subheader("Sequencing Kits")
@@ -140,7 +139,7 @@ for seq_kit, count in sequencing_counts.items():
 
 st.subheader("Products and Associated Costs")
 
-# Apply bundle rules with sequencing adjustment
+
 def apply_bundle_rules(product, count):
     product_breakdown = {}
     sequencing_adjustment = {}
@@ -157,15 +156,32 @@ def apply_bundle_rules(product, count):
             remainder = count % bundle_size
             product_breakdown[bundle_product] = bundle_count
             count = remainder
-            
-            # Apply sequencing adjustment if provided
+
+            # Apply sequencing adjustment if available
             if sequencing_adjusted and sequencing_adjusted.strip() != "NA":
                 sequencing_adjustment[bundle_product] = sequencing_adjusted.strip()
 
     if count > 0:
         product_breakdown[product] = count
-    
+
     return product_breakdown, sequencing_adjustment
+
+
+
+# Apply bundle rules with sequencing adjustment
+sequencing_adjustments = {}
+
+for product, count in product_counts.items():
+    updated_products, seq_adjust = apply_bundle_rules(product, count)
+    
+    for new_product, new_count in updated_products.items():
+        cost, unit_price = get_product_price(new_product, new_count)
+        total_cost += cost
+        st.write(f"{new_product}: {new_count} x {unit_price:.2f} = {cost:.2f}")
+
+        # Store sequencing adjustments
+        if new_product in seq_adjust:
+            sequencing_adjustments[new_product] = seq_adjust[new_product]
 
 
 st.subheader("Total Experiment Cost")
