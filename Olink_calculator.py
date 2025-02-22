@@ -37,7 +37,7 @@ st.title("Pricing Calculator")
 
 st.subheader("Select Category")
 category_options = categories_df["Category Name"].tolist()
-selected_category = st.radio("Choose a panel category:", category_options)
+selected_category = st.radio("Choose a panel category:", category_options, horizontal)
 
 selected_file = categories_df[categories_df["Category Name"] == selected_category]["Prices File"].values[0]
 prices_df = pd.read_csv(selected_file)
