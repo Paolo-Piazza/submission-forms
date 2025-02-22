@@ -124,6 +124,7 @@ for panel, count in panel_breakdown.items():
     st.write(f"Panel: {panel}, Quantity: {count}")
 
 # Adjust sequencing kits based on bundle changes
+sequencing_adjustments = {}
 for product, seq_kit in sequencing_adjustments.items():
     if product in sequencing_counts:
         sequencing_counts[seq_kit] = sequencing_counts.pop(product)
@@ -165,7 +166,7 @@ def apply_bundle_rules(product, count):
 
 
 # Apply bundle rules with sequencing adjustment
-sequencing_adjustments = {}
+
 
 for product, count in product_counts.items():
     updated_products, seq_adjust = apply_bundle_rules(product, count)
