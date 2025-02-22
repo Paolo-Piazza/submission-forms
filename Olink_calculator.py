@@ -168,23 +168,6 @@ def apply_bundle_rules(product, count):
     return product_breakdown, sequencing_adjustment
 
 
-
-# Apply bundle rules with sequencing adjustment
-
-
-for product, count in product_counts.items():
-    updated_products, seq_adjust = apply_bundle_rules(product, count)
-    
-    for new_product, new_count in updated_products.items():
-        cost, unit_price = get_product_price(new_product, new_count)
-        total_cost += cost
-        st.write(f"{new_product}: {new_count} x {unit_price:.2f} = {cost:.2f}")
-
-        # Store sequencing adjustments
-        if new_product in seq_adjust:
-            sequencing_adjustments[new_product] = seq_adjust[new_product]
-
-
 st.subheader("Total Experiment Cost")
 st.write(f"Total Cost ({selected_account}): {total_cost:.2f}")
 if selected_account in ["External Academic", "External Commercial"]:
