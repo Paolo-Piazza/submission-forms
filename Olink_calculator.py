@@ -116,8 +116,7 @@ if num_samples > 0 and selected_panels:
             num_batches = num_samples // batch_size
             panel_breakdown[panel] = panel_breakdown.get(panel, 0) + num_batches
 
-sequencing_counts[sequencing_kit] = math.ceil(
-    sequencing_counts.get(sequencing_kit, 0) + (num_batches * sequencing_qty))
+sequencing_counts[sequencing_kit] = math.ceil(sequencing_counts.get(sequencing_kit, 0) + (num_batches * sequencing_qty))
             product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
 
 # Display Panel Breakdown
