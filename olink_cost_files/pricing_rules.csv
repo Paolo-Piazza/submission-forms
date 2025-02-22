@@ -1,7 +1,7 @@
 Product Name,Internal Price,External Academic Price,External Commercial Price,Sample Number for Discount,Discount Percentage,Bundle Size,Bundle Product Name,Sequencing Adjustment
 Library Preparation_Olink Explore 384 -(single),12729.16,14002.07,15274.99,NA,NA,4,Library Preparation_Olink Explore 384 -88s (4X384),Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library Preparation_Olink Explore Reveal,12948.47,14243.32,15538.16,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Olink Explore 384 -88s (4X384),29318.14,32249.96,35181.77,NA,NA,2,3k,Olink_Sequencing_NovaSeq6000_35_SR_S4
+Library Preparation_Olink Explore 384 -(single),29318.14,32249.96,35181.77,NA,NA,8,3k,Olink_Sequencing_NovaSeq6000_35_SR_S4
 Library Preparation_Olink Explore 3k -SP,56935.42,62628.97,68322.51,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library Preparation_Olink Explore 3k -S4,225570.74,248127.81,270684.89,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_35_SR_S4
 Olink_Sequencing_NovaSeq6000_35_SR_S4,16895.13,18584.64,20274.16,NA,NA,NA,NA,NA
