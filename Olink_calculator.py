@@ -123,12 +123,6 @@ if num_samples > 0 and selected_panels:
 for panel, count in panel_breakdown.items():
     st.write(f"Panel: {panel}, Quantity: {count}")
 
-# Adjust sequencing kits based on bundle changes
-
-for product, seq_kit in sequencing_adjustments.items():
-    if product in sequencing_counts:
-        sequencing_counts[seq_kit] = sequencing_counts.pop(product)
-
 # Display sequencing kit breakdown
 st.subheader("Sequencing Kits")
 for seq_kit, count in sequencing_counts.items():
@@ -183,6 +177,16 @@ for product, count in product_counts.items():
         if new_product in seq_adjust:
             sequencing_adjustments[new_product] = seq_adjust[new_product]
 
+
+# ✅ Now apply sequencing kit changes after sequencing_adjustments is populated
+updated_sequencing_counts = {}
+
+for product, seq_kit in sequencing_adjustments.items():
+    if product in sequencing_counts:
+        updated_sequencing_counts[seq_kit] = sequencing_counts.pop(product)
+
+# ✅ Merge updates into sequencing_counts
+sequencing_counts.update(updated_sequencing_counts)
 
 st.subheader("Total Experiment Cost")
 st.write(f"Total Cost ({selected_account}): {total_cost:.2f}")
