@@ -129,6 +129,7 @@ for product, seq_kit in sequencing_adjustments.items():
     if product in sequencing_counts:
         sequencing_counts[seq_kit] = sequencing_counts.pop(product)
 
+
 # Display sequencing kit breakdown
 st.subheader("Sequencing Kits")
 for seq_kit, count in sequencing_counts.items():
@@ -139,30 +140,33 @@ for seq_kit, count in sequencing_counts.items():
 
 st.subheader("Products and Associated Costs")
 
-
+# Apply bundle rules with sequencing adjustment
 def apply_bundle_rules(product, count):
     product_breakdown = {}
     sequencing_adjustment = {}
+
     row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
     
     if not row.empty and pd.notna(row.iloc[0]["Bundle Size"]):
         bundle_size = int(row.iloc[0]["Bundle Size"])
         bundle_product = row.iloc[0]["Bundle Product Name"]
         sequencing_adjusted = row.iloc[0].get("Sequencing Adjustment", None)
-        
+
         if count >= bundle_size:
             bundle_count = count // bundle_size
             remainder = count % bundle_size
             product_breakdown[bundle_product] = bundle_count
             count = remainder
             
-            if sequencing_adjusted:
-                sequencing_adjustment[bundle_product] = sequencing_adjusted
-    
+            # Apply sequencing adjustment if provided
+            if sequencing_adjusted and sequencing_adjusted.strip() != "NA":
+                sequencing_adjustment[bundle_product] = sequencing_adjusted.strip()
+
     if count > 0:
         product_breakdown[product] = count
     
     return product_breakdown, sequencing_adjustment
+
 
 
 # Apply bundle rules with sequencing adjustment
