@@ -116,8 +116,8 @@ if num_samples > 0 and selected_panels:
             num_batches = num_samples // batch_size
             panel_breakdown[panel] = panel_breakdown.get(panel, 0) + num_batches
 
-sequencing_counts[sequencing_kit] = math.ceil(sequencing_counts.get(sequencing_kit, 0) + (num_batches * sequencing_qty))
-product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
+    sequencing_counts[sequencing_kit] = math.ceil(sequencing_counts.get(sequencing_kit, 0) + (num_batches * sequencing_qty))
+    product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
 
 # Display Panel Breakdown
 for panel, count in panel_breakdown.items():
@@ -133,13 +133,12 @@ for seq_kit, count in sequencing_counts.items():
 
 st.subheader("Products and Associated Costs")
 
-
 def apply_bundle_rules(product, count):
     product_breakdown = {}
     sequencing_adjustment = {}
 
     row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
-    
+
     if not row.empty and pd.notna(row.iloc[0]["Bundle Size"]):
         bundle_size = int(row.iloc[0]["Bundle Size"])
         bundle_product = row.iloc[0]["Bundle Product Name"]
@@ -151,7 +150,7 @@ def apply_bundle_rules(product, count):
             product_breakdown[bundle_product] = bundle_count
             count = remainder
 
-            # Apply sequencing adjustment if available
+            # ✅ Ensure the correct sequencing kit is stored for the bundle
             if sequencing_adjusted and sequencing_adjusted.strip() != "NA":
                 sequencing_adjustment[bundle_product] = sequencing_adjusted.strip()
 
@@ -159,6 +158,7 @@ def apply_bundle_rules(product, count):
         product_breakdown[product] = count
 
     return product_breakdown, sequencing_adjustment
+
 
 
 
