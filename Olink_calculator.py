@@ -120,6 +120,7 @@ if num_samples > 0 and selected_panels:
             product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
 
 # Display Panel Breakdown
+sequencing_adjustments{}
 for panel, count in panel_breakdown.items():
     st.write(f"Panel: {panel}, Quantity: {count}")
 
