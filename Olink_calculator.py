@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 from datetime import datetime
-import math  
+
 # Set page configuration for full width
 st.set_page_config(layout="wide")
 
+# Custom CSS for intermediate width
 # Improved Custom CSS for intermediate width
 def set_custom_css():
     st.markdown(
@@ -49,7 +50,7 @@ prepared_for = st.text_input("Prepared for (Name/Email)")
 notes = st.text_area("Additional Notes")
 
 account_types = ["Internal", "External Academic", "External Commercial"]
-selected_account = st.radio("Select Account Type:", account_types)
+selected_account = st.radio("Select Account Type:", account_types, horizontal=True)
 
 combinable_panels = prices_df[prices_df["Panel type"] == "Combinable"]["Panel Name"].tolist()
 standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
@@ -61,10 +62,10 @@ for i, panel in enumerate(combinable_panels):
     with cols[i % 4]:
         if st.checkbox(panel):
             selected_combinable_panels.append(panel)
-if len(selected_combinable_panels) == len(combinable_panels):
-    selected_combinable_panels = ["Explore 3K"]
+#if len(selected_combinable_panels) == len(combinable_panels):
+#    selected_combinable_panels = ["Explore 3K"]
 
-selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone")
+selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone", horizontal=True)
 selected_panels = selected_combinable_panels + ([selected_standalone_panel] if selected_standalone_panel else [])
 
 num_samples = st.number_input("Enter the number of samples:", min_value=1, step=1)
@@ -115,78 +116,45 @@ if num_samples > 0 and selected_panels:
         if batch_size and product_name:
             num_batches = num_samples // batch_size
             panel_breakdown[panel] = panel_breakdown.get(panel, 0) + num_batches
-
-    sequencing_counts[sequencing_kit] = math.ceil(sequencing_counts.get(sequencing_kit, 0) + (num_batches * sequencing_qty))
-    product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
+            sequencing_counts[sequencing_kit] = round(
+                sequencing_counts.get(sequencing_kit, 0) + (num_batches * sequencing_qty))
+            product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
 
 # Display Panel Breakdown
 for panel, count in panel_breakdown.items():
     st.write(f"Panel: {panel}, Quantity: {count}")
 
-# Display sequencing kit breakdown
 st.subheader("Sequencing Kits")
 for seq_kit, count in sequencing_counts.items():
     cost, unit_price = get_product_price(seq_kit, count)
     total_cost += cost
-    st.write(f"{seq_kit}: {count} x {unit_price:.2f} = {cost:.2f}")
-
+    st.write(f"Sequencing Kit: {seq_kit}, Quantity: {count}, Cost: {cost:.2f}")
 
 st.subheader("Products and Associated Costs")
 
+
 def apply_bundle_rules(product, count):
     product_breakdown = {}
-    sequencing_adjustment = {}
-
     row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
-
     if not row.empty and pd.notna(row.iloc[0]["Bundle Size"]):
         bundle_size = int(row.iloc[0]["Bundle Size"])
         bundle_product = row.iloc[0]["Bundle Product Name"]
-        sequencing_adjusted = row.iloc[0].get("Sequencing Adjustment", None)
-
         if count >= bundle_size:
             bundle_count = count // bundle_size
             remainder = count % bundle_size
             product_breakdown[bundle_product] = bundle_count
             count = remainder
-
-            # ✅ Ensure the correct sequencing kit is stored for the bundle
-            if sequencing_adjusted and sequencing_adjusted.strip() != "NA":
-                sequencing_adjustment[bundle_product] = sequencing_adjusted.strip()
-
     if count > 0:
         product_breakdown[product] = count
+    return product_breakdown
 
-    return product_breakdown, sequencing_adjustment
-
-
-
-
-# Apply bundle rules with sequencing adjustment
-sequencing_adjustments = {}
 
 for product, count in product_counts.items():
-    updated_products, seq_adjust = apply_bundle_rules(product, count)
-    
+    updated_products = apply_bundle_rules(product, count)
     for new_product, new_count in updated_products.items():
         cost, unit_price = get_product_price(new_product, new_count)
         total_cost += cost
         st.write(f"{new_product}: {new_count} x {unit_price:.2f} = {cost:.2f}")
-
-        # Store sequencing adjustments
-        if new_product in seq_adjust:
-            sequencing_adjustments[new_product] = seq_adjust[new_product]
-
-
-# ✅ Now apply sequencing kit changes after sequencing_adjustments is populated
-updated_sequencing_counts = {}
-
-for product, seq_kit in sequencing_adjustments.items():
-    if product in sequencing_counts:
-        updated_sequencing_counts[seq_kit] = sequencing_counts.pop(product)
-
-# ✅ Merge updates into sequencing_counts
-sequencing_counts.update(updated_sequencing_counts)
 
 st.subheader("Total Experiment Cost")
 st.write(f"Total Cost ({selected_account}): {total_cost:.2f}")
