@@ -61,8 +61,8 @@ for i, panel in enumerate(combinable_panels):
     with cols[i % 4]:
         if st.checkbox(panel):
             selected_combinable_panels.append(panel)
-#if len(selected_combinable_panels) == len(combinable_panels):
-#    selected_combinable_panels = ["Explore 3K"]
+if len(selected_combinable_panels) == len(combinable_panels):
+    selected_combinable_panels = ["Explore 3K"]
 
 selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone")
 selected_panels = selected_combinable_panels + ([selected_standalone_panel] if selected_standalone_panel else [])
