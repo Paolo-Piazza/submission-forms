@@ -52,21 +52,21 @@ notes = st.text_area("Additional Notes")
 account_types = ["Internal", "External Academic", "External Commercial"]
 selected_account = st.radio("Select Account Type:", account_types, horizontal=True)
 
-combinable_panels = prices_df[prices_df["Panel type"] == "Combinable"]["Panel Name"].tolist()
+Standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
 standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
 
 st.subheader("Select Products")
-selected_combinable_panels = []
+selected_Standalone_panels = []
 cols = st.columns(4)
-for i, panel in enumerate(combinable_panels):
+for i, panel in enumerate(Standalone_panels):
     with cols[i % 4]:
         if st.checkbox(panel):
-            selected_combinable_panels.append(panel)
-#if len(selected_combinable_panels) == len(combinable_panels):
-#    selected_combinable_panels = ["Explore 3K"]
+            selected_Standalone_panels.append(panel)
+#if len(selected_Standalone_panels) == len(Standalone_panels):
+#    selected_Standalone_panels = ["Explore 3K"]
 
 selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone", horizontal=True)
-selected_panels = selected_combinable_panels + ([selected_standalone_panel] if selected_standalone_panel else [])
+selected_panels = selected_Standalone_panels + ([selected_standalone_panel] if selected_standalone_panel else [])
 
 num_samples = st.number_input("Enter the number of samples:", min_value=1, step=1)
 

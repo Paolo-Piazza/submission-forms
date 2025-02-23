@@ -1,4 +1,4 @@
 Panel Name,Batch Size,Sequencing Kit,Sequencing Qty per Batch,Panel type,Product Name
-T48 Cytokine,40,No sequencing needed,0.501,Combinable,Target 48
-T48 Immune Surveillance,40,No sequencing needed,0.501,Combinable,Target 48
-T48 Mouse Cytokine,40,No sequencing needed,0.501,Combinable,Target 48
+T48 Cytokine,40,No sequencing needed,0.501,Standalone,Target 48
+T48 Immune Surveillance,40,No sequencing needed,0.501,Standalone,Target 48
+T48 Mouse Cytokine,40,No sequencing needed,0.501,Standalone,Target 48
