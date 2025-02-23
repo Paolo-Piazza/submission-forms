@@ -8,7 +8,7 @@ Library Preparation_Ribo Depletion (8 samples),8,Olink_Sequencing_NovaSeq6000_10
 Library Preparation_Ribo Depletion_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Ribo Depletion_Mini (8 samples)
 Library Preparation_Bacterial Depletion (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Bacterial Depletion (8 samples)
 Library Preparation_Bacterial Depletion_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Bacterial Depletion_Mini (8 samples)
-Library Preparation_Total RNA (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone	Library,Preparation_Total RNA (8 samples)
+Library Preparation_Total RNA (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Total RNA (8 samples)
 Library Preparation_Total RNA_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Total RNA_Mini (8 samples)
 Library Preparation_Amplicon (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Amplicon (8 samples)
 Library preparation_ATAC (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library preparation_ATAC (8 samples)
