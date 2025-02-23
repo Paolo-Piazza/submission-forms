@@ -53,7 +53,6 @@ account_types = ["Internal", "External Academic", "External Commercial"]
 selected_account = st.radio("Select Account Type:", account_types, horizontal=True)
 
 Standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
-standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
 
 st.subheader("Select Products")
 selected_Standalone_panels = []
@@ -62,8 +61,6 @@ for i, panel in enumerate(Standalone_panels):
     with cols[i % 4]:
         if st.checkbox(panel):
             selected_Standalone_panels.append(panel)
-#if len(selected_Standalone_panels) == len(Standalone_panels):
-#    selected_Standalone_panels = ["Explore 3K"]
 
 selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone", horizontal=False)
 selected_panels = selected_Standalone_panels + ([selected_standalone_panel] if selected_standalone_panel else [])
