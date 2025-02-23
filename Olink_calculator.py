@@ -52,7 +52,8 @@ notes = st.text_area("Additional Notes")
 account_types = ["Internal", "External Academic", "External Commercial"]
 selected_account = st.radio("Select Account Type:", account_types, horizontal=True)
 
-Standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
+combinable_panels = prices_df[prices_df["Panel type"] == "Combinable"]["Panel Name"].tolist()
+standalone_panels = prices_df[prices_df["Panel type"] == "Standalone"]["Panel Name"].tolist()
 
 st.subheader("Select Products")
 selected_Standalone_panels = []
