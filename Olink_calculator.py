@@ -65,7 +65,7 @@ for i, panel in enumerate(Standalone_panels):
 #if len(selected_Standalone_panels) == len(Standalone_panels):
 #    selected_Standalone_panels = ["Explore 3K"]
 
-selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone", horizontal=True)
+selected_standalone_panel = st.radio("Select one:", standalone_panels, index=None, key="standalone", horizontal=False)
 selected_panels = selected_Standalone_panels + ([selected_standalone_panel] if selected_standalone_panel else [])
 
 num_samples = st.number_input("Enter the number of samples:", min_value=1, step=1)
