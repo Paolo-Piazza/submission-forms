@@ -1,4 +1,4 @@
-Panel Name,Batch Size,Sequencing Kit,Sequencing Qty per Batch,Panel type,Product Name
-Nulisa Inf,86,Alamar_Aviti_Sequencing_75PE,0.501,Standalone,Nulisa_Inf_Seq
-Nulisa Inf AQ,86,Alamar_Aviti_Sequencing_75PE,0.501,Standalone,Nulisa_InfAQ_Seq
-Nulisa CNS,86,Alamar_Aviti_Sequencing_75PE,0.501,Standalone,Nulisa_CNS_Seq
+Panel Name,Batch Size,Panel type,Product Name
+Nulisa Inf,86,Combinable,Nulisa_Inf_Seq
+Nulisa Inf AQ,86,Combinable,Nulisa_InfAQ_Seq
+Nulisa CNS,86,Combinable,Nulisa_CNS_Seq

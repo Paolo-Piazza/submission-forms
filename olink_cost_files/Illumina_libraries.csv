@@ -1,17 +1,17 @@
-Panel Name,Batch Size,Sequencing Kit,Sequencing Qty per Batch,Panel type,Product Name
-mRNA_PolyA Enrichment,1,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.03125,Standalone,Library Preparation_PolyA Enrichment
-mRNA_Globin Depletion,1,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.0625,Standalone,Library Preparation_Globin Depletion
-Library Preparation_PolyA Enrichment (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.25,Standalone,Library Preparation_PolyA Enrichment (8 samples)
-Library Preparation_Globin Depletion (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0.5,Standalone,Library Preparation_Globin Depletion (8 samples)
-Library Preparation_Globin Depletion_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Globin Depletion_Mini (8 samples)
-Library Preparation_Ribo Depletion (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Ribo Depletion (8 samples)
-Library Preparation_Ribo Depletion_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Ribo Depletion_Mini (8 samples)
-Library Preparation_Bacterial Depletion (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Bacterial Depletion (8 samples)
-Library Preparation_Bacterial Depletion_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Bacterial Depletion_Mini (8 samples)
-Library Preparation_Total RNA (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Total RNA (8 samples)
-Library Preparation_Total RNA_Mini (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Total RNA_Mini (8 samples)
-Library Preparation_Amplicon (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library Preparation_Amplicon (8 samples)
-Library preparation_ATAC (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library preparation_ATAC (8 samples)
-qPCR (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,qPCR (8 samples)
-Library preparation_NEB-UIIFS_Illumina (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library preparation_NEB-UIIFS_Illumina (8 samples)
-Library preparation_NEB-UIIFS_Element (8 samples),8,Olink_Sequencing_NovaSeq6000_100_SR_SP,0,Standalone,Library preparation_NEB-UIIFS_Element (8 samples)
+Panel Name,Batch Size,Panel type,Product Name
+mRNA_PolyA Enrichment,1,Combinable,Library Preparation_PolyA Enrichment
+mRNA_Globin Depletion,1,Combinable,Library Preparation_Globin Depletion
+Library Preparation_PolyA Enrichment (8 samples),8,Combinable,Library Preparation_PolyA Enrichment (8 samples)
+Library Preparation_Globin Depletion (8 samples),8,Combinable,Library Preparation_Globin Depletion (8 samples)
+Library Preparation_Globin Depletion_Mini (8 samples),8,Combinable,Library Preparation_Globin Depletion_Mini (8 samples)
+Library Preparation_Ribo Depletion (8 samples),8,Combinable,Library Preparation_Ribo Depletion (8 samples)
+Library Preparation_Ribo Depletion_Mini (8 samples),8,Combinable,Library Preparation_Ribo Depletion_Mini (8 samples)
+Library Preparation_Bacterial Depletion (8 samples),8,Combinable,Library Preparation_Bacterial Depletion (8 samples)
+Library Preparation_Bacterial Depletion_Mini (8 samples),8,Combinable,Library Preparation_Bacterial Depletion_Mini (8 samples)
+Library Preparation_Total RNA (8 samples),8,Combinable,Library Preparation_Total RNA (8 samples)
+Library Preparation_Total RNA_Mini (8 samples),8,Combinable,Library Preparation_Total RNA_Mini (8 samples)
+Library Preparation_Amplicon (8 samples),8,Combinable,Library Preparation_Amplicon (8 samples)
+Library preparation_ATAC (8 samples),8,Combinable,Library preparation_ATAC (8 samples)
+qPCR (8 samples),8,Combinable,qPCR (8 samples)
+Library preparation_NEB-UIIFS_Illumina (8 samples),8,Combinable,Library preparation_NEB-UIIFS_Illumina (8 samples)
+Library preparation_NEB-UIIFS_Element (8 samples),8,Combinable,Library preparation_NEB-UIIFS_Element (8 samples)
