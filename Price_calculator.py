@@ -1,3 +1,4 @@
+
 import pandas as pd
 import math
 import streamlit as st
@@ -176,12 +177,10 @@ def get_panel_details(panel):
         try:
             batch_size = int(row.iloc[0]["Batch Size"])
             product_name = row.iloc[0]["Product Name"].strip()
-            sequencing_kit = row.iloc[0]["Sequencing Kit"].strip()
-            sequencing_qty = float(row.iloc[0]["Sequencing Qty per Batch"])
-            return batch_size, product_name, sequencing_kit, sequencing_qty
+            return batch_size, product_name
         except (ValueError, TypeError):
-            return None, None, None, None
-    return None, None, None, None
+            return None, None
+    return None, None
 
 # Function to fetch product price
 def get_product_price(product, count):
@@ -192,10 +191,19 @@ def get_product_price(product, count):
         return count * price_per_unit, price_per_unit
     return 0, 0
 
+# Get sequencing kit information
+def get_sequencing_kit_info(product):
+    row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
+    if not row.empty:
+        sequencing_kit = row.iloc[0].get("Sequencing Kit", "").strip()
+        sequencing_qty = float(row.iloc[0].get("Sequencing Qty per Batch", 0))
+        return sequencing_kit, sequencing_qty
+    return None, 0
+
 # Determine closest valid sample numbers
 valid_batches = []
 for panel in selected_panels:
-    batch_size, _, _, _ = get_panel_details(panel)
+    batch_size, product_name = get_panel_details(panel)
     if batch_size:
         valid_batches.append(batch_size)
 if valid_batches:
@@ -203,64 +211,110 @@ if valid_batches:
     closest_larger = min([b * (num_samples // b + 1) for b in valid_batches])
     num_samples = st.radio("Choose a valid sample count:", [closest_smaller, closest_larger])
 
+
+def apply_bundle_rules(product, sample_count, batch_size):
+    row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
+
+    if not row.empty:
+        bundle_size = row.iloc[0].get("Bundle Size")
+        bundle_product = row.iloc[0].get("Bundle Product Name")
+
+        if pd.notna(bundle_size) and pd.notna(bundle_product):
+            bundle_size = int(bundle_size)
+            batch_count = sample_count // batch_size  # Number of full batches
+            full_bundles = batch_count // bundle_size  # Number of complete bundled products
+            remainder_batches = batch_count % bundle_size  # Remaining unbundled batches
+
+            result = {}
+            if full_bundles > 0:
+                result[bundle_product] = full_bundles
+            if remainder_batches > 0:
+                result[product] = remainder_batches  # Remainder stays as original product
+
+            return result
+
+    # If no bundling is needed, return the original product count
+    return {product: sample_count // batch_size}
+
+
 # Process selection and calculate costs
-st.subheader("Panel Breakdown")
+
 panel_breakdown = {}
 product_counts = {}
 sequencing_counts = {}
 total_cost = 0.0
 export_data = [["Prepared by", prepared_by], ["Prepared for", prepared_for], ["Account Type", selected_account], ["Number of Samples", num_samples], ["Notes", notes]]
+
 if num_samples > 0 and selected_panels:
     for panel in selected_panels:
-        batch_size, product_name, sequencing_kit, sequencing_qty = get_panel_details(panel)
+        batch_size, product_name = get_panel_details(panel)
         if batch_size and product_name:
-            num_batches = num_samples // batch_size
-            panel_breakdown[panel] = panel_breakdown.get(panel, 0) + num_batches
-            sequencing_counts[sequencing_kit] = sequencing_counts.get(sequencing_kit, 0) + (num_batches * (sequencing_qty))
-            product_counts[product_name] = product_counts.get(product_name, 0) + num_batches
+            product_batches = num_samples // batch_size  # Calculate full batch count
+            bundled_products = apply_bundle_rules(product_name, num_samples, batch_size)
+
+            for bundled_product, bundled_count in bundled_products.items():
+                product_counts[bundled_product] = product_counts.get(bundled_product, 0) + bundled_count
+
+                # Ensure sequencing kits are assigned correctly based on the final product
+                sequencing_kit, sequencing_qty = get_sequencing_kit_info(bundled_product)
+                if sequencing_kit:
+                    sequencing_counts[sequencing_kit] = sequencing_counts.get(sequencing_kit, 0) + (
+                                bundled_count * sequencing_qty)
 
 # Round sequencing kit quantities
-for seq_kit in sequencing_counts:
-    sequencing_counts[seq_kit] = math.ceil(sequencing_counts[seq_kit])
+#for seq_kit in sequencing_counts:
+ #   sequencing_counts[seq_kit] = math.ceil(sequencing_counts[seq_kit])
+
+#for seq_kit, count in sequencing_counts.items():
+#    cost, unit_price = get_product_price(seq_kit, count)
+#    total_cost += cost
+#    st.write(f"Sequencing Kit: {seq_kit}, Quantity: {count}, Cost: {cost:.2f}")
+
+#for seq_kit in sequencing_counts:
+
 
 # Display panel breakdown
+st.subheader("Panel Breakdown")
+panel_breakdown = {}
+if num_samples > 0 and selected_panels:
+    for panel in selected_panels:
+        batch_size, _ = get_panel_details(panel)
+        if batch_size:
+            panel_count = num_samples // batch_size
+            panel_breakdown[panel] = panel_breakdown.get(panel, 0) + panel_count
+
+
+
 for panel, count in panel_breakdown.items():
     st.write(f"Panel: {panel}, Quantity: {count}")
-    export_data.append(["Panel", panel, count])
+
 
 # Apply bundle rules and calculate total cost
 st.subheader("Products and Associated Costs")
-final_product_counts = {}
-def apply_bundle_rules(product, count):
-    product_breakdown = {}
-    row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
-    if not row.empty and pd.notna(row.iloc[0]["Bundle Size"]):
-        bundle_size = int(row.iloc[0]["Bundle Size"])
-        bundle_product = row.iloc[0]["Bundle Product Name"]
-        if count >= bundle_size:
-            bundle_count = count // bundle_size
-            remainder = count % bundle_size
-            product_breakdown[bundle_product] = bundle_count
-            count = remainder
-    if count > 0:
-        product_breakdown[product] = count
-    return product_breakdown
-
 for product, count in product_counts.items():
-    updated_products = apply_bundle_rules(product, count)
-    for new_product, new_count in updated_products.items():
-        cost, unit_price = get_product_price(new_product, new_count)
-        total_cost += cost
-        st.write(f"{new_product}: {new_count} x {unit_price:.2f} = {cost:.2f}")
-        export_data.append([new_product, new_count, unit_price, cost])
+    cost, unit_price = get_product_price(product, count)
+    total_cost += cost
+    st.write(f"{product}: {count} x {unit_price:.2f} = {cost:.2f}")
+
+if not product_counts:
+    st.write("No products found.")
+
 
 # Display sequencing kit breakdown
 st.subheader("Sequencing Kits")
+
+for seq_kit in sequencing_counts:
+    sequencing_counts[seq_kit] = math.ceil(sequencing_counts[seq_kit])
+
+
 for seq_kit, count in sequencing_counts.items():
     cost, unit_price = get_product_price(seq_kit, count)
     total_cost += cost
-    st.write(f"{seq_kit}: {count} x {unit_price:.2f} = {cost:.2f}")
-    export_data.append([seq_kit, count, unit_price, cost])
+    st.write(f"Sequencing Kit: {seq_kit}, Quantity: {count}, Cost: {cost:.2f}")
+
+
+
+
 
 # Display total cost
 st.subheader("Total Experiment Cost")
