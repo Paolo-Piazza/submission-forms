@@ -7,10 +7,10 @@ Target 48,4593.15,5052.46,5511.78,NA,NA,NA,NA,NA,0,No sequencing needed
 Target 96,6883.15,7571.465,8259.78,NA,NA,NA,NA,NA,0,No sequencing needed
 Flex 21,4262.5,4688.75,5115,2,14,NA,NA,NA,0,No sequencing needed
 Flex 15,4047.5,4452.25,4857,2,14,NA,NA,NA,0,No sequencing needed
-Focus,0,0,0,NA,NA,NA,NA,NA,NA,No sequencing needed
+Focus,0,0,0,NA,NA,NA,NA,NA,0,No sequencing needed
 Library Preparation_Olink Explore HT (86),34628.85,38091.74,41554.62,NA,NA,2,1,Library Preparation_Olink Explore HT,0.5,Olink_Sequencing_NovaSeq6000_35_SR_S4
 Library Preparation_Olink Explore HT,69257.68221,76183.45043,83109.21865,NA,NA,NA,NA,NA,1,Olink_Sequencing_NovaSeq6000_35_SR_S4
-No sequencing needed,0,0,0,NA,NA,NA,NA,NA,NA,NA
+No sequencing needed,0,0,0,NA,NA,NA,NA,NA,0,NA
 Alamar_Aviti_Sequencing_75PE,1360,1496,1645,NA,NA,NA,NA,NA,0,NA
 Nulisa_Inf_Seq,10834,11917.29,13000.68,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
 Nulisa_InfAQ_Seq,13508,14859.22,16210.06,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
