@@ -1,39 +1,38 @@
-Product Name,Internal Price,External Academic Price,External Commercial Price,Sample Number for Discount,Discount Percentage,Bundle Size,Bundle Product Name,Sequencing Adjustment
-Library Preparation_Olink Explore 384 -(single),12729.16,14002.07,15274.99,NA,NA,4,Library Preparation_Olink Explore 384 -88s (4X384),Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Olink Explore Reveal,12948.47,14243.32,15538.16,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Olink Explore 384 -(single),29318.14,32249.96,35181.77,NA,NA,8,3k,Olink_Sequencing_NovaSeq6000_35_SR_S4
-Library Preparation_Olink Explore 3k -SP,56935.42,62628.97,68322.51,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Olink Explore 3k -S4,225570.74,248127.81,270684.89,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_35_SR_S4
-Olink_Sequencing_NovaSeq6000_35_SR_S4,16895.13,18584.64,20274.16,NA,NA,NA,NA,NA
-Olink_Sequencing_NovaSeq6000_100_SR_SP,3552.9,3908.19,4263.48,NA,NA,NA,NA,NA
-Target 48,4593.15,5052.46,5511.78,NA,NA,NA,NA,No sequencing needed
-Target 96,6883.15,7571.465,8259.78,NA,NA,NA,NA,No sequencing needed
-Flex 21,4262.5,4688.75,5115,2,14,NA,NA,No sequencing needed
-Flex 15,4047.5,4452.25,4857,2,14,NA,NA,No sequencing needed
-Focus,0,0,0,NA,NA,NA,NA,No sequencing needed
-Library Preparation_Olink Explore HT (86),34628.85,38091.74,41554.62,NA,NA,2,Library Preparation_Olink Explore HT,Olink_Sequencing_NovaSeq6000_35_SR_S4
-Library Preparation_Olink Explore HT,69257.68221,76183.45043,83109.21865,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_35_SR_S4
-No sequencing needed,0,0,0,NA,NA,NA,NA,NA
-Alamar_Aviti_Sequencing_75PE,1360,1496,1645,NA,NA,NA,NA,NA
-Nulisa_Inf_Seq,10834,11917.29,13000.68,NA,NA,NA,NA,Alamar_Aviti_Sequencing_75PE
-Nulisa_InfAQ_Seq,13508,14859.22,16210.06,NA,NA,NA,NA,Alamar_Aviti_Sequencing_75PE
-Nulisa_CNS_Seq,"	9051",9956,10861.09,NA,NA,NA,NA,Alamar_Aviti_Sequencing_75PE
-Library Preparation_PolyA Enrichment,223,245.3,267.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Globin Depletion,535,588.5,642,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_PolyA Enrichment (8 samples),223,245.3,267.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Globin Depletion (8 samples),535,588.5,642,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Globin Depletion_Mini (8 samples),368.26,405.086,441.912,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Ribo Depletion (8 samples),487,535.7,584.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Ribo Depletion_Mini (8 samples),343,377.3,411.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Bacterial Depletion (8 samples),503,553.3,603.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Bacterial Depletion_Mini (8 samples),351.42,386.562,421.704,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Total RNA (8 samples),1212,1333.2,1454.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Total RNA_Mini (8 samples),1092,1201.2,1310.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library Preparation_Amplicon (8 samples),606,666.6,727.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library preparation_ATAC (8 samples),1316,1447.6,1579.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-qPCR (8 samples),136,149.6,163.2,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library preparation_NEB-UIIFS_Illumina (8 samples),1378,1515.8,1653.6,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Library preparation_NEB-UIIFS_Element (8 samples),1402,1542.2,1682.4,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
-Explore 3k (88 samples),56935.42,62628.97,68322.51,NA,NA,4,Explore 3k (352 samples),Olink_Sequencing_NovaSeq6000_100_SR_SP
-Explore 3k (352 samples),225570.74,225570.74,225570.74,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_35_SR_S4
-Library Preparation_Olink Explore 384 -88s (4X384),29318.14,32249.96,35181.77,NA,NA,NA,NA,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Product Name,Internal Price,External Academic Price,External Commercial Price,Sample Number for Discount,Discount Percentage,Bundle Size,Bundle Factor,Bundle Product Name,Sequencing Qty per Batch,Sequencing Kit
+Library Preparation_Olink Explore 384 -(single),12729.16,14002.07,15274.99,NA,NA,4,1,Library Preparation_Olink Explore 384 -88s (4X384),0.5,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Olink Explore Reveal,12948.47,14243.32,15538.16,NA,NA,NA,NA,NA,0.5,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Olink_Sequencing_NovaSeq6000_35_SR_S4,16895.13,18584.64,20274.16,NA,NA,NA,NA,NA,NA,NA
+Olink_Sequencing_NovaSeq6000_100_SR_SP,3552.9,3908.19,4263.48,NA,NA,NA,NA,NA,NA,NA
+Target 48,4593.15,5052.46,5511.78,NA,NA,NA,NA,NA,NA,No sequencing needed
+Target 96,6883.15,7571.465,8259.78,NA,NA,NA,NA,NA,NA,No sequencing needed
+Flex 21,4262.5,4688.75,5115,2,14,NA,NA,NA,NA,No sequencing needed
+Flex 15,4047.5,4452.25,4857,2,14,NA,NA,NA,NA,No sequencing needed
+Focus,0,0,0,NA,NA,NA,NA,NA,NA,No sequencing needed
+Library Preparation_Olink Explore HT (86),34628.85,38091.74,41554.62,NA,NA,2,1,Library Preparation_Olink Explore HT,0.5,Olink_Sequencing_NovaSeq6000_35_SR_S4
+Library Preparation_Olink Explore HT,69257.68221,76183.45043,83109.21865,NA,NA,NA,NA,NA,1,Olink_Sequencing_NovaSeq6000_35_SR_S4
+No sequencing needed,0,0,0,NA,NA,NA,NA,NA,NA,NA
+Alamar_Aviti_Sequencing_75PE,1360,1496,1645,NA,NA,NA,NA,NA,NA,NA
+Nulisa_Inf_Seq,10834,11917.29,13000.68,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
+Nulisa_InfAQ_Seq,13508,14859.22,16210.06,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
+Nulisa_CNS_Seq,"	9051",9956,10861.09,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
+Library Preparation_PolyA Enrichment,223,245.3,267.6,NA,NA,NA,NA,NA,0.03125,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Globin Depletion,535,588.5,642,NA,NA,NA,NA,NA,0.0625,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Explore 3k (88 samples),56935.42,62628.97,68322.51,NA,NA,4,1,Explore 3k (352 samples),4,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Explore 3k (352 samples),225570.74,225570.74,225570.74,NA,NA,NA,NA,NA,2,Olink_Sequencing_NovaSeq6000_35_SR_S4
+Library Preparation_Olink Explore 384 -88s (4X384),29318.14,32249.96,35181.77,NA,NA,NA,NA,NA,2,Olink_Sequencing_NovaSeq6000_100_SR_SP
+mRNA_PolyA Enrichment,NA,NA,NA,NA,NA,NA,NA,NA,0.03125,Olink_Sequencing_NovaSeq6000_100_SR_SP
+mRNA_Globin Depletion,NA,NA,NA,NA,NA,NA,NA,NA,0.0625,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_PolyA Enrichment (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0.25,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Globin Depletion (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0.5,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Globin Depletion_Mini (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Ribo Depletion (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Ribo Depletion_Mini (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Bacterial Depletion (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Bacterial Depletion_Mini (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Total RNA (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Total RNA_Mini (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library Preparation_Amplicon (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library preparation_ATAC (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+qPCR (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library preparation_NEB-UIIFS_Illumina (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Library preparation_NEB-UIIFS_Element (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
