@@ -36,3 +36,6 @@ Library preparation_ATAC (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_
 qPCR (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library preparation_NEB-UIIFS_Illumina (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library preparation_NEB-UIIFS_Element (8 samples),NA,NA,NA,NA,NA,NA,NA,NA,0,Olink_Sequencing_NovaSeq6000_100_SR_SP
+Xenium - Training,1200,1320,1440,NA,NA,NA,NA,NA,0,NA
+Xenium run,1024,1126.4,1228.8,NA,NA,NA,NA,NA,0,NA
+Xenium walk up,921,1013.1,1105.2,NA,NA,NA,NA,NA,0,NA
