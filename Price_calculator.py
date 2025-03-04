@@ -187,8 +187,17 @@ def get_product_price(product, count):
     row = rules_df[rules_df["Product Name"].str.strip() == product.strip()]
     if not row.empty:
         price_column = f"{selected_account} Price"
-        price_per_unit = float(row.iloc[0][price_column])
-        return count * price_per_unit, price_per_unit
+        base_price = float(row.iloc[0][price_column])
+
+        # Check for volume discount
+        if "Sample Number for Discount" in row and "Discount Percentage" in row:
+            discount_threshold = row.iloc[0]["Sample Number for Discount"]
+            discount_percentage = row.iloc[0]["Discount Percentage"]
+
+            if count >= discount_threshold:
+                base_price *= (1 - discount_percentage / 100)
+
+        return count * base_price, base_price
     return 0, 0
 
 # Get sequencing kit information
