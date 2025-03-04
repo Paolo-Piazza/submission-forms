@@ -12,9 +12,9 @@ Library Preparation_Olink Explore HT (86),34628.85,38091.74,41554.62,NA,NA,2,1,L
 Library Preparation_Olink Explore HT,69257.68221,76183.45043,83109.21865,NA,NA,NA,NA,NA,1,Olink_Sequencing_NovaSeq6000_35_SR_S4
 No sequencing needed,0,0,0,NA,NA,NA,NA,NA,0,NA
 Alamar_Aviti_Sequencing_75PE,1360,1496,1645,NA,NA,NA,NA,NA,0,NA
-Nulisa_Inf_Seq,10834,11917.29,13000.68,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
+Nulisa_Inf_Seq,10834,11917.29,13000.68,430,30,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
 Nulisa_InfAQ_Seq,13508,14859.22,16210.06,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
-Nulisa_CNS_Seq,"	9051",9956,10861.09,NA,NA,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
+Nulisa_CNS_Seq,9718,10689.8,11661.6,430,30,NA,NA,NA,0.5,Alamar_Aviti_Sequencing_75PE
 Library Preparation_PolyA Enrichment,223,245.3,267.6,NA,NA,NA,NA,NA,0.03125,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Library Preparation_Globin Depletion,535,588.5,642,NA,NA,NA,NA,NA,0.0625,Olink_Sequencing_NovaSeq6000_100_SR_SP
 Explore 3k (88 samples),56935.42,62628.97,68322.51,NA,NA,4,1,Explore 3k (352 samples),4,Olink_Sequencing_NovaSeq6000_100_SR_SP
