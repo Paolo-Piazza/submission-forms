@@ -190,7 +190,7 @@ def get_product_price(product, count):
         base_price = float(row.iloc[0][price_column])
 
         # Check for volume discount
-        if "Sample Number for Discount" in row and "Discount Percentage" in row:
+        if "Batch Number for Discount" in row and "Discount Percentage" in row:
             discount_threshold = row.iloc[0]["Sample Number for Discount"]
             discount_percentage = row.iloc[0]["Discount Percentage"]
 
