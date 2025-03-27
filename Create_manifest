@@ -1,0 +1,95 @@
+import streamlit as st
+import openpyxl as xl
+import math as m
+import csv
+import os
+import shutil
+from datetime import datetime
+from io import BytesIO
+from zipfile import ZipFile
+from io import StringIO
+
+
+def change(old_loc):
+    new_row = m.ceil(old_loc / 12)
+    scale = (old_loc - 1) * 8 + new_row
+    f13 = (new_row - 1) * 13
+    plate_loc = m.ceil(old_loc / 96)
+    new_loc = scale - (f13 / 13 * 96) - ((plate_loc - 1) * 8)
+    return int(new_loc)
+
+
+def read_excel(file):
+    wb = xl.load_workbook(file, data_only=True)
+    return wb.active
+
+
+def generate_manifests(sheet):
+    today = datetime.now().strftime('%Y.%m.%d')
+    sample_count = len(sheet['C']) - 36
+    plate_count = int(sample_count / 96)
+
+    project_id = str(sheet['D15'].value)
+    matrix_type = sheet['D27'].value
+
+    csv_files = []
+
+    for i, plate_num in enumerate(range(1, plate_count + 1)):
+        csv_data = [["Name", "Well", "Matrix Type"]]
+
+        for wells in range(1, 87):
+            row_index = change(wells) + 96 * i + 36
+            name = sheet.cell(row=row_index, column=2).value
+            well = sheet.cell(row=row_index, column=1).value
+            csv_data.append([name, well, matrix_type])
+
+        plate_str = f'P{plate_num:02}'
+        filename = f"{today}_{project_id}_{plate_str}_Manifest.csv"
+
+        # Append data as (filename, list of rows)
+        csv_files.append((filename, csv_data))
+
+    return csv_files
+
+
+
+
+def create_zip(csv_files):
+    zip_buffer = BytesIO()
+    with ZipFile(zip_buffer, "w") as zip_file:
+        for filename, data in csv_files:
+            # Use StringIO to write text CSV content
+            text_stream = StringIO()
+            writer = csv.writer(text_stream)
+            for row in data:
+                writer.writerow(row)
+            # Encode to bytes before writing to ZIP
+            zip_file.writestr(filename, text_stream.getvalue())
+    zip_buffer.seek(0)
+    return zip_buffer
+
+
+# --- Streamlit App ---
+st.set_page_config(page_title="Manifest Generator", layout="centered")
+
+st.title("📄 Manifest Generator from Excel")
+st.markdown("Upload an Excel file and generate CSV manifest files for each 96-well plate.")
+
+uploaded_file = st.file_uploader("Upload Excel Sample Submission File", type=["xlsx"])
+
+if uploaded_file:
+    sheet = read_excel(uploaded_file)
+    try:
+        csv_files = generate_manifests(sheet)
+        zip_buffer = create_zip(csv_files)
+        st.success(f"✅ Generated {len(csv_files)} manifest file(s).")
+
+        st.download_button(
+            label="📥 Download Manifests as ZIP",
+            data=zip_buffer,
+            file_name="Manifests.zip",
+            mime="application/zip"
+        )
+
+    except Exception as e:
+        st.error(f"❌ An error occurred: {e}")
