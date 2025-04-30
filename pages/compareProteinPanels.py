@@ -41,7 +41,7 @@ preloaded_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
 
 
 # Checkbox selection for multiple preloaded files
-st.preloaded_files(df.sort_values(by="preloaded_files").preloaded_files.unique())
+# st.preloaded_files(df.sort_values(by="preloaded_files").preloaded_files.unique())
 selected_preloaded_files = st.multiselect("Select preloaded files:", preloaded_files)
 select_all = st.checkbox("Select all preloaded files")
 
