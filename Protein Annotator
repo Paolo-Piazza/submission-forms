@@ -1,0 +1,115 @@
+import streamlit as st
+import pandas as pd
+import requests
+import time
+from gprofiler import GProfiler
+
+st.set_page_config(page_title="Protein Annotator", layout="wide")
+st.title("🔬 Protein Function & Pathway Annotator")
+
+tabs = st.tabs(["🧬 Protein Annotations", "🧠 Pathway Enrichment"])
+
+# ------------------------ TAB 1: Annotations ------------------------
+with tabs[0]:
+    st.header("🧬 Protein Function Annotation")
+    st.markdown("Upload a CSV file with a column named **Protein Symbol** to fetch UniProt annotations.")
+    uploaded_file = st.file_uploader("Upload CSV for Annotation", type="csv")
+
+    def get_uniprot_id(symbol):
+        query = f"{symbol} AND organism_id:9606"
+        url = f"https://rest.uniprot.org/uniprotkb/search?query={query}&fields=accession&format=json&size=1"
+        url = url.replace(" ", "%20")
+        try:
+            r = requests.get(url)
+            r.raise_for_status()
+            data = r.json()
+            if data.get("results"):
+                return data["results"][0]["primaryAccession"]
+        except Exception:
+            return None
+
+    def get_uniprot_details(accession):
+        url = f"https://rest.uniprot.org/uniprotkb/{accession}.json"
+        try:
+            r = requests.get(url)
+            r.raise_for_status()
+            data = r.json()
+            name = data.get("proteinDescription", {}).get("recommendedName", {}).get("fullName", {}).get("value", "")
+            comments = data.get("comments", [])
+            function = " ".join(
+                c.get("texts", [{}])[0].get("value", "")
+                for c in comments if c.get("commentType") == "FUNCTION"
+            )
+            go_terms = [ref["id"] for ref in data.get("uniProtKBCrossReferences", []) if ref["database"] == "GO"]
+            pathways = [ref["id"] for ref in data.get("uniProtKBCrossReferences", []) if ref["database"] in ["Reactome", "KEGG"]]
+            diseases = []
+            for comment in comments:
+                if comment.get("commentType") == "DISEASE":
+                    notes = comment.get("texts", [])
+                    if notes:
+                        diseases.append(notes[0].get("value", ""))
+            return name, function, ", ".join(go_terms), ", ".join(pathways), ", ".join(diseases)
+        except Exception:
+            return "", "", "", "", ""
+
+    if uploaded_file:
+        df = pd.read_csv(uploaded_file)
+        if "Protein Symbol" not in df.columns:
+            st.error("❌ The CSV must contain a column named 'Protein Symbol'.")
+        else:
+            results = []
+            with st.spinner("Annotating proteins... this may take a moment..."):
+                for symbol in df["Protein Symbol"]:
+                    accession = get_uniprot_id(symbol)
+                    if accession:
+                        name, function, go, pathways, diseases = get_uniprot_details(accession)
+                    else:
+                        name = function = go = pathways = diseases = ""
+                    results.append({
+                        "Protein Symbol": symbol,
+                        "UniProt ID": accession,
+                        "Protein Name": name,
+                        "Function": function,
+                        "GO Terms": go,
+                        "Pathways": pathways,
+                        "Diseases": diseases
+                    })
+                    time.sleep(0.4)
+
+            annotated_df = pd.DataFrame(results)
+            st.success("✅ Annotation complete!")
+            st.dataframe(annotated_df, use_container_width=True)
+
+            csv = annotated_df.to_csv(index=False).encode("utf-8")
+            st.download_button("📥 Download CSV", csv, "annotated_proteins.csv", "text/csv")
+
+# ------------------------ TAB 2: Enrichment ------------------------
+with tabs[1]:
+    st.header("🧠 Pathway Enrichment Analysis")
+    st.markdown("Upload a gene list (as CSV with **Protein Symbol** column) and run enrichment using GO/Reactome/KEGG.")
+    enrich_file = st.file_uploader("Upload CSV for Enrichment", type="csv", key="enrich")
+
+    if enrich_file:
+        enrich_df = pd.read_csv(enrich_file)
+        if "Protein Symbol" not in enrich_df.columns:
+            st.error("❌ The CSV must contain a column named 'Protein Symbol'.")
+        else:
+            symbols = enrich_df["Protein Symbol"].dropna().tolist()
+            organism = st.selectbox("Select organism", ["hsapiens", "mmusculus", "rnorvegicus"], index=0)
+
+            if st.button("Run Enrichment"):
+                gp = GProfiler(return_dataframe=True)
+                with st.spinner("Fetching enrichment data..."):
+                    enriched = gp.profile(
+                        organism=organism,
+                        query=symbols,
+                        sources=["GO:BP", "GO:MF", "GO:CC", "REAC", "KEGG"]
+                    )
+
+                if enriched.empty:
+                    st.warning("No enrichment results found.")
+                else:
+                    st.success("✅ Enrichment complete!")
+                    st.dataframe(enriched, use_container_width=True)
+                    csv = enriched.to_csv(index=False).encode("utf-8")
+                    st.download_button("📥 Download Enrichment CSV", csv, "enrichment_results.csv", "text/csv")
