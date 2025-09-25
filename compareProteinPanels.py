@@ -4,6 +4,20 @@ from io import StringIO
 import pandas as pd
 import streamlit as st
 
+#-----------temp
+import streamlit as st, hashlib, sys, os
+from pathlib import Path
+
+APP_FILE = Path(__file__)
+APP_HASH = hashlib.md5(APP_FILE.read_bytes()).hexdigest()[:10]
+
+st.caption(f"Build marker: {APP_FILE.name} @ {APP_HASH}")
+st.caption(f"Streamlit version: {st.__version__}")
+st.caption(f"Running from: {APP_FILE.resolve()}")
+st.caption(f"Working dir: {Path.cwd()}")
+st.caption(f"Python: {sys.version.split()[0]}")
+#-----------end temp
+
 # ---------- Helpers ----------
 def find_common_items(original_df: pd.DataFrame, custom_df: pd.DataFrame, key_column: str) -> pd.DataFrame:
     """Return rows from original_df whose key_column appears in custom_df[key_column]."""
@@ -135,3 +149,4 @@ if sources and custom_file:
             )
 else:
     st.info("Select or upload at least one original CSV **and** upload a custom CSV to begin.")
+
