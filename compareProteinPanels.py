@@ -1,97 +1,137 @@
-import streamlit as st
-import pandas as pd
 import os
-from io import BytesIO
+from pathlib import Path
+from io import StringIO
+import pandas as pd
+import streamlit as st
 
+# ---------- Helpers ----------
+def find_common_items(original_df: pd.DataFrame, custom_df: pd.DataFrame, key_column: str) -> pd.DataFrame:
+    """Return rows from original_df whose key_column appears in custom_df[key_column]."""
+    # normalize to string to reduce false negatives due to type mismatch
+    left = original_df.copy()
+    right = custom_df.copy()
+    left[key_column] = left[key_column].astype(str)
+    right[key_column] = right[key_column].astype(str)
+    return left[left[key_column].isin(right[key_column])]
 
-def find_common_items(original_df, custom_df, key_column):
-    return original_df[original_df[key_column].isin(custom_df[key_column])]
+def df_to_csv_bytes(df: pd.DataFrame) -> bytes:
+    """Return a UTF-8 CSV as bytes for st.download_button."""
+    return df.to_csv(index=False).encode("utf-8")
 
+# ---------- Paths (safe even on Streamlit Cloud) ----------
+APP_DIR = Path(__file__).parent if "__file__" in globals() else Path.cwd()
+DATA_DIR = APP_DIR / "data"
+TEMPLATE_DIR = APP_DIR / "template"
+TEMPLATE_FILE = TEMPLATE_DIR / "template.csv"
 
-def convert_df_to_csv(df):
-    output = BytesIO()
-    df.to_csv(output, index=False)
-    return output.getvalue()
+# Ensure directories exist (won't error if they don't; we just handle gracefully)
+preloaded_files = []
+if DATA_DIR.exists():
+    preloaded_files = sorted([p.name for p in DATA_DIR.glob("*.csv")])
 
-
+# ---------- UI ----------
 st.title("CSV List Comparator")
 
-DATA_DIR = "data/"  # Folder where preloaded files are stored
-TEMPLATE_DIR = "template/"  # Folder where template files are stored
-TEMPLATE_FILE = "template.csv"  # Template file name
+# Template download (if present)
+if TEMPLATE_FILE.exists():
+    st.download_button(
+        label="Download CSV Template",
+        data=TEMPLATE_FILE.read_bytes(),
+        file_name=TEMPLATE_FILE.name,
+        mime="text/csv",
+    )
 
-preloaded_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
-
-# Download button for the template file
-if os.path.exists(os.path.join(TEMPLATE_DIR, TEMPLATE_FILE)):
-    with open(os.path.join(TEMPLATE_DIR, TEMPLATE_FILE), "rb") as template:
-        st.download_button(
-            label="Download CSV Template",
-            data=template,
-            file_name=TEMPLATE_FILE,
-            mime="text/csv"
-        )
-
-#DATA_DIR_Temp = os.path.join(os.path.dirname(__file__), "template")
-#template_file = [f for f in os.listdir(DATA_DIR_Temp) if f.endswith("template.csv")]
-#st.download_button("template.csv", template_file)
-#DATA_DIR = "https://github.com/Paolo-Piazza/submission-forms/tree/main"  # Folder where preloaded files are stored
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
-preloaded_files = [f for f in os.listdir(DATA_DIR) if f.endswith(".csv")]
-
-
-# Checkbox selection for multiple preloaded files
+# Pick preloaded files
 selected_preloaded_files = st.multiselect("Select preloaded files:", preloaded_files)
-select_all = st.checkbox("Select all preloaded files")
-
-if select_all:
+if st.checkbox("Select all preloaded files"):
     selected_preloaded_files = preloaded_files
 
-# File uploaders
+# Uploads
 uploaded_files = st.file_uploader("Or Upload Original CSV Files", type=["csv"], accept_multiple_files=True)
 custom_file = st.file_uploader("Upload Custom CSV File", type=["csv"], accept_multiple_files=False)
 
-# Merge preloaded and uploaded files
-all_files = uploaded_files if uploaded_files else []
-for filename in selected_preloaded_files:
-    all_files.append(open(os.path.join(DATA_DIR, filename), "rb"))
+# Build a normalized list of sources: [{"name": "file.csv", "df": DataFrame}]
+sources = []
 
-if all_files and custom_file:
-    custom_df = pd.read_csv(custom_file)
-    st.write("Custom List Preview:", custom_df.head())
+# Add preloaded files
+for fname in selected_preloaded_files:
+    path = DATA_DIR / fname
+    try:
+        df = pd.read_csv(path)
+        sources.append({"name": fname, "df": df, "source": "preloaded"})
+    except Exception as e:
+        st.warning(f"Could not read preloaded file '{fname}': {e}")
 
-    key_column = st.selectbox("Select the common column for comparison:", custom_df.columns)
+# Add uploaded files
+if uploaded_files:
+    for uf in uploaded_files:
+        try:
+            # Important: read into DataFrame NOW and keep it, so we don't depend on re-reading buffers later.
+            df = pd.read_csv(uf)
+            sources.append({"name": uf.name, "df": df, "source": "uploaded"})
+        except Exception as e:
+            st.warning(f"Could not read uploaded file '{uf.name}': {e}")
+
+if sources and custom_file:
+    try:
+        custom_df = pd.read_csv(custom_file)
+    except Exception as e:
+        st.error(f"Could not read custom CSV: {e}")
+        st.stop()
+
+    st.write("Custom List Preview")
+    st.dataframe(custom_df.head(20), use_container_width=True)
+
+    key_column = st.selectbox("Select the common column for comparison:", list(custom_df.columns))
 
     if st.button("Compare Lists"):
-        results = {}
-        for file in all_files:
-            original_df = pd.read_csv(file)
-            common_items = find_common_items(original_df, custom_df, key_column)
-            results[file.name] = len(common_items)
+        results = []
+        skipped = []
 
-        # Sort results by number of matches in descending order
-        sorted_results = sorted(results.items(), key=lambda x: x[1], reverse=True)
+        for item in sources:
+            name, original_df = item["name"], item["df"]
+            if key_column not in original_df.columns:
+                skipped.append(name)
+                continue
+            try:
+                common = find_common_items(original_df, custom_df, key_column)
+                results.append((name, len(common), common))
+            except Exception as e:
+                st.warning(f"Error comparing '{name}': {e}")
 
-        # Display summary of results
+        # Sort by matches desc
+        results.sort(key=lambda x: x[1], reverse=True)
 
-        st.write("### Summary of Matches")
-        summary_text = "\n".join(
-            [f"{os.path.basename(file_name)}: {match_count} matches found" for file_name, match_count in sorted_results])
-        st.text(summary_text)
-
-
-        for file_name, match_count in sorted_results:
-            st.write(f"**{os.path.basename(file_name)}: {match_count} matches found**")
-
-            original_df = pd.read_csv(
-                os.path.join(DATA_DIR, file_name)) if file_name in preloaded_files else pd.read_csv(file_name)
-            common_items = find_common_items(original_df, custom_df, key_column)
-            csv_data = convert_df_to_csv(common_items)
+        # Summary
+        st.subheader("Summary of Matches")
+        if results:
+            summary_lines = [f"{name}: {count} matches found" for name, count, _ in results]
+            summary_text = "\n".join(summary_lines)
+            st.code(summary_text)
             st.download_button(
-                label=f"Download common items for {os.path.basename(file_name)}",
-                data=csv_data,
-                file_name=f"common_items_{file_name}",
+                "Download summary",
+                data=summary_text.encode("utf-8"),
+                file_name="comparison_summary.txt",
+                mime="text/plain",
+            )
+        else:
+            st.info("No matches found in the selected files.")
+
+        if skipped:
+            st.info(
+                "Skipped files (missing selected key column): "
+                + ", ".join(skipped)
+            )
+
+        # Per-file downloads
+        for name, count, common_df in results:
+            st.markdown(f"**{name}: {count} matches found**")
+            st.dataframe(common_df.head(50), use_container_width=True)
+            st.download_button(
+                label=f"Download common items for {name}",
+                data=df_to_csv_bytes(common_df),
+                file_name=f"common_items_{name}",
                 mime="text/csv",
             )
-                #text_contents = str(all_results)
-        st.download_button("download summary", summary_text)
+else:
+    st.info("Select or upload at least one original CSV **and** upload a custom CSV to begin.")
